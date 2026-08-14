@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* ---------- Background ---------- */
+
+  --background: #fafaf7;
+
+  --foreground: #333333;
+
+  /* ---------- Brand ---------- */
+
+  --cc-teal: #0f7c8d;
+
+  --cc-orange: #f47a32;
+
+  --cc-yellow: #f7d84b;
+
+  /* ---------- Neutrals ---------- */
+
+  --cc-white: #ffffff;
+
+  --cc-light: #f3f4f2;
+
+  --cc-border: #d9ddd8;
+
+  --cc-text: #333333;
+
+  --cc-text-light: #666666;
+
+  /* ---------- Feedback ---------- */
+
+  --cc-success: #3b9c6d;
+
+  --cc-warning: #e39b18;
+
+  --cc-error: #c94b45;
+
+  /* ---------- Radius ---------- */
+
+  --radius-sm: 8px;
+
+  --radius-md: 12px;
+
+  --radius-lg: 18px;
+
+  /* ---------- Shadow ---------- */
+
+  --shadow-card: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+}
+
+@theme inline {
+
+  --color-background: var(--background);
+
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--cc-teal);
+
+  --color-secondary: var(--cc-orange);
+
+  --color-accent: var(--cc-yellow);
+
+  --color-card: var(--cc-white);
+
+  --color-border: var(--cc-border);
+
+  --font-sans: var(--font-geist-sans);
+
+  --font-mono: var(--font-geist-mono);
+
+}
+
+body {
+
+  background: var(--background);
+
+  color: var(--foreground);
+
+  font-family: var(--font-geist-sans);
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+a {
+
+  color: var(--cc-teal);
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+
+}
+
+a:hover {
+
+  color: var(--cc-orange);
+
+}
+
+button {
+
+  transition: all 0.2s ease;
+
+}
+
+::selection {
+
+  background: var(--cc-yellow);
+
+  color: var(--cc-text);
+
+}
