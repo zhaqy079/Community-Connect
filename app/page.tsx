@@ -11,7 +11,7 @@ export default function Home() {
 
       <Navigation />
 
-      <main className="w-full max-w-6xl px-8 py-16">
+      <main className="w-full max-w-6xl px-8 py-8">
 
         <Hero />
 
