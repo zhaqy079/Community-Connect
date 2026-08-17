@@ -21,29 +21,36 @@ import homelessConnectData from
 import streetConnectData from
   "../data/services/street-connect.json"
 
-// Test Dataset young-carer-support.json 
+import communityConnectionsProgramData from
+  "../data/services/community-connections-program.json";
+
+
 const youngCarerSupport =
   youngCarerSupportData as Service;
 
-// Test Dataset sa-youth-week.json 
+
 const saYouthWeek =
   saYouthWeekData as Service;
 
-// Test Dataset mayfs.json
+
 const mayfs =
   mayfsData as Service;
 
-// Test Dataset mayfs.json
+
 const youthJustice =
   youthJusticeData as Service;
 
-// Test Dataset homeless-connect-sa.json 
+
 const homelessConnect =
   homelessConnectData as Service;
 
-// Test Dataset street-connect.json
+
 const streetConnect =
   streetConnectData as Service;
+
+const communityConnectionsProgram =
+  communityConnectionsProgramData as Service;
+
 
 export const services: Service[] = [
   youngCarerSupport,
@@ -51,7 +58,8 @@ export const services: Service[] = [
   mayfs,
   youthJustice,
   homelessConnect,
-  streetConnect
+  streetConnect,
+  communityConnectionsProgram
 ];
 
 export function getAllServices(): Service[] {

@@ -59,6 +59,13 @@ const serviceCases = [
     name: "Street Connect",
     resourceType: "program",
     shortName: undefined
+  },
+  {
+    id: "community-connections-program",
+    slug: "community-connections-program",
+    name: "Community Connections Program",
+    resourceType: "program",
+    shortName: undefined
   }
 ] as const;
 
@@ -117,6 +124,15 @@ const matchingCases = [
       "street-outreach"
     ],
     expectedId: "street-connect"
+  },
+  {
+    description: "community connection support",
+    needTags: [
+      "social-isolation",
+      "not-eligible-ndis",
+      "not-eligible-my-aged-care"
+    ],
+    expectedId: "community-connections-program"
   }
 ] as const;
 
@@ -231,6 +247,22 @@ describe("service dataset", () => {
 
     expect(ids).toContain(
       "homeless-connect-sa",
+    );
+  });
+
+  test("includes expected community resources", () => {
+    const services = getServicesByCategory(
+      "community-support"
+    );
+
+    const ids = services.map(
+      service => service.id
+    );
+
+    expect(ids).toEqual(
+      expect.arrayContaining([
+        "community-connections-program"
+      ])
     );
   });
 
