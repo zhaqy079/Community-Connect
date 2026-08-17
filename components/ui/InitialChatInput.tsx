@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react";
 import SupportSuggestions from "./SupportSuggestions";
 
-export default function ChatInput() {
+export default function InitialChatInput() {
 
     const router = useRouter();
 
@@ -17,6 +17,9 @@ export default function ChatInput() {
         const trimmedMessage = message.trim();
 
         if (!trimmedMessage) return;
+
+        // TEMP Implementation
+        sessionStorage.setItem("initialChatMessage", trimmedMessage);
 
         router.push(`/chat?message=${encodeURIComponent(trimmedMessage)}`);
     };
