@@ -53,7 +53,7 @@ export type PrimaryAction = {
 };
 
 export type Service = {
-  // AI Identity
+  // Identity and routing
   id: string;
   slug: string;
   name: string;
