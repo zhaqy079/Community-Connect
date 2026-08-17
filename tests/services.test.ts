@@ -52,6 +52,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "companion-card",
+    slug: "companion-card",
+    name: "Companion Card",
+    resourceType: "program",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -170,6 +177,15 @@ const matchingCases = [
       "eye-care-costs"
     ],
     expectedId: "glassessa"
+  },
+  {
+    description: "free entry for a disability companion",
+    needTags: [
+      "free-companion-entry",
+      "significant-permanent-disability",
+      "lifelong-attendant-care"
+    ],
+    expectedId: "companion-card"
   },
   {
     description: "young carer support",
@@ -341,7 +357,8 @@ describe("service dataset", () => {
         "energy-bill-concession",
         "mhcc",
         "eeps",
-        "glassessa"
+        "glassessa",
+        "companion-card"
       ])
     );
   });
@@ -479,7 +496,8 @@ describe("service dataset", () => {
       expect.arrayContaining([
         "ctsa",
         "itc",
-        "glassessa"
+        "glassessa",
+        "companion-card"
       ])
     );
   });

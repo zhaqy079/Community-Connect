@@ -17,6 +17,9 @@ import eepsData from
 import glassessaData from
   "../data/services/glassessa.json";
 
+import companionCardData from
+  "../data/services/companion-card.json";
+
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
 
@@ -59,6 +62,9 @@ const eeps = eepsData as Service;
 
 const glassessa = glassessaData as Service;
 
+const companionCard =
+  companionCardData as Service;
+
 const youngCarerSupport =
   youngCarerSupportData as Service;
 
@@ -98,6 +104,7 @@ export const services: Service[] = [
   mhcc,
   eeps,
   glassessa,
+  companionCard,
   youngCarerSupport,
   saYouthWeek,
   mayfs,

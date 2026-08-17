@@ -1,0 +1,59 @@
+{
+  "id": "companion-card",
+  "slug": "companion-card",
+  "name": "Companion Card",
+  "provider": "Department of Human Services",
+  "resourceType": "program",
+  "categories": [
+    "disability-accessibility",
+    "cost-of-living-concessions"
+  ],
+  "needTags": [
+    "companion-card",
+    "free-companion-entry",
+    "carer-entry",
+    "significant-permanent-disability",
+    "lifelong-attendant-care",
+    "mobility-assistance",
+    "communication-assistance",
+    "self-care-assistance",
+    "accessible-events",
+    "community-participation"
+  ],
+  "shortDescription": "A card for eligible South Australians with significant and permanent disability that provides free entry for a companion or carer at participating venues and activities.",
+  "plainEnglishSummary": "If you have a significant and permanent disability and need lifelong attendant care to participate in community activities, a Companion Card may allow your companion or carer to enter participating venues with you at no charge.",
+  "audience": [
+    "South Australians with a severe or profound lifelong disability",
+    "People who cannot participate at most venues and activities without significant attendant care",
+    "People requiring substantial assistance with mobility, communication, self-care or planning"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Free companion admission at participating venues",
+    "Free companion access to participating activities",
+    "Accessible community participation",
+    "Companion ticket support",
+    "Free Master Locksmiths Access Key for cardholders"
+  ],
+  "deliveryMethods": [
+    "online",
+    "phone"
+  ],
+  "cost": "not-applicable",
+  "availabilityStatus": "active",
+  "availabilityNote": "The cardholder purchases their own ticket and the participating venue provides a companion ticket at no charge. The card is lifelong and is generally renewed every 10 years so the holder's details and photograph can be updated. Venue participation and additional activity charges may vary.",
+  "contact": {
+    "website": "https://www.sa.gov.au/topics/care-and-support/disability/companion-card/apply-for-a-companion-card",
+    "phone": "1800 667 110",
+    "email": "DHSCompanionCard@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Check eligibility and apply",
+    "url": "https://www.sa.gov.au/topics/care-and-support/disability/companion-card/apply-for-a-companion-card"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. Applicants generally need to live in South Australia or reside there under a valid visa, have a severe or profound lifelong disability, and require significant lifelong attendant care to participate at most community venues and activities. Having a disability or an NDIS plan does not automatically qualify someone for a Companion Card.",
+  "sourceUrl": "https://www.sa.gov.au/topics/care-and-support/disability/companion-card/apply-for-a-companion-card",
+  "lastVerified": "2026-08-17"
+}
