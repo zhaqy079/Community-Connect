@@ -45,6 +45,13 @@ const serviceCases = [
     shortName: "EEPS"
   },
   {
+    id: "glassessa",
+    slug: "glassessa",
+    name: "GlassesSA",
+    resourceType: "program",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -154,6 +161,15 @@ const matchingCases = [
       "risk-of-disconnection"
     ],
     expectedId: "eeps"
+  },
+  {
+    description: "low-cost prescription glasses",
+    needTags: [
+      "low-cost-glasses",
+      "prescription-glasses",
+      "eye-care-costs"
+    ],
+    expectedId: "glassessa"
   },
   {
     description: "young carer support",
@@ -324,7 +340,8 @@ describe("service dataset", () => {
         "cost-of-living",
         "energy-bill-concession",
         "mhcc",
-        "eeps"
+        "eeps",
+        "glassessa"
       ])
     );
   });
@@ -397,6 +414,9 @@ describe("service dataset", () => {
       expect.arrayContaining([
         "cost-of-living",
         "energy-bill-concession",
+        "mhcc",
+        "eeps",
+        "glassessa",
         "young-carer-support",
         "sa-youth-week",
         "mayfs",
@@ -458,7 +478,8 @@ describe("service dataset", () => {
     expect(ids).toEqual(
       expect.arrayContaining([
         "ctsa",
-        "itc"
+        "itc",
+        "glassessa"
       ])
     );
   });

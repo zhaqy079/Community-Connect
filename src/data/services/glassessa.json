@@ -1,0 +1,61 @@
+{
+  "id": "glassessa",
+  "slug": "glassessa",
+  "name": "GlassesSA",
+  "provider": "Department of Human Services",
+  "resourceType": "program",
+  "categories": [
+    "cost-of-living-concessions",
+    "disability-accessibility"
+  ],
+  "needTags": [
+    "low-cost-glasses",
+    "prescription-glasses",
+    "vision-support",
+    "eye-care-costs",
+    "contact-lenses",
+    "serious-eye-condition",
+    "concession-card",
+    "low-income",
+    "optometrist",
+    "accessible-eye-care"
+  ],
+  "shortDescription": "A South Australian Government program providing low-cost prescription glasses and, for eligible serious eye conditions, no-cost contact lenses.",
+  "plainEnglishSummary": "If you have an eligible concession card or meet another eligibility pathway, GlassesSA may help you obtain low-cost prescription glasses. People with certain serious eye conditions may receive prescribed contact lenses at no cost.",
+  "audience": [
+    "South Australian residents holding an eligible concession card",
+    "Children and young people in state care",
+    "Eligible asylum seekers",
+    "Dependants of people eligible for standard glasses",
+    "People with a prescribed serious eye condition requiring contact lenses"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Low-cost prescription glasses",
+    "Standard frames and lenses",
+    "Thinner lenses for eligible prescriptions",
+    "No-cost contact lenses for prescribed serious eye conditions",
+    "Participating optometrist directory",
+    "Optical eligibility assessment"
+  ],
+  "deliveryMethods": [
+    "in-person"
+  ],
+  "cost": "subsidised",
+  "availabilityStatus": "active",
+  "availabilityNote": "Eligible customers can generally receive one new pair of glasses every three years, or earlier when clinically necessary. Maximum customer payments for standard glasses are $25 for single vision, $30 for single vision grind, $50 for bi-focal and $100 for multi-focal glasses. Eligible Aboriginal customers can receive standard glasses at no cost. Eligible contact lenses are supplied at no cost. Optional upgrades may cost extra.",
+  "contact": {
+    "website": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/glassessa",
+    "phone": "1300 762 577",
+    "email": "GlassesSA@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Find a participating optometrist",
+    "url": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/glassessa/optometrists"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. Applicants generally need to live in South Australia and hold an eligible concession card or qualify through another recognised pathway. Contact lenses require a prescribed serious eye condition and must be supplied through an authorised hospital or optometrist.",
+  "sourceUrl": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/glassessa",
+  "lastVerified": "2026-08-17"
+}
