@@ -1,0 +1,59 @@
+{
+  "id": "youth-justice-services",
+  "slug": "youth-justice-services",
+  "name": "Youth Justice Services",
+  "provider": "Department of Human Services",
+  "resourceType": "service",
+  "categories": [
+    "youth-families-carers",
+    "community-support"
+  ],
+  "needTags": [
+    "youth-justice-support",
+    "justice-system-navigation",
+    "case-management",
+    "family-reconnection",
+    "community-reconnection",
+    "cultural-connection",
+    "psychology-support",
+    "speech-pathology",
+    "youth-supervision"
+  ],
+  "shortDescription": "Programs and support for young people in contact with the youth justice system, including case management, specialist support and community-based supervision.",
+  "plainEnglishSummary": "If you are a young person involved with the youth justice system, this service may help you understand available support, make positive choices and reconnect with family, community and culture.",
+  "audience": [
+    "Children and young people in contact with the youth justice system",
+    "Young people under youth justice supervision",
+    "Families and carers seeking information about youth justice support"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Youth justice case management",
+    "Assessment and case planning",
+    "Community Youth Justice support",
+    "Psychology support",
+    "Speech pathology",
+    "Child diversion pathways",
+    "Home detention support",
+    "Family, community and cultural reconnection"
+  ],
+  "deliveryMethods": [
+    "in-person",
+    "community-location"
+  ],
+  "cost": "unknown",
+  "availabilityStatus": "active",
+  "availabilityNote": "Access to particular programs depends on the young person's circumstances and involvement with the youth justice system.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/youth-justice/youth-justice-services"
+  },
+  "primaryAction": {
+    "label": "View youth justice support",
+    "url": "https://dhs.sa.gov.au/how-we-help/youth-justice/youth-justice-services"
+  },
+  "eligibilityNote": "Community Connect cannot confirm access or eligibility. Contact Youth Justice Services or the relevant supervising team to discuss which support may be appropriate.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/youth-justice/youth-justice-services",
+  "lastVerified": "2026-08-17"
+}

@@ -38,6 +38,13 @@ const serviceCases = [
       "Metropolitan Aboriginal Youth and Family Services",
     resourceType: "service",
     shortName: "MAYFS"
+  },
+  {
+    id: "youth-justice-services",
+    slug: "youth-justice-services",
+    name: "Youth Justice Services",
+    resourceType: "service",
+    shortName: undefined
   }
 ] as const;
 
@@ -69,6 +76,15 @@ const matchingCases = [
       "cultural-connection"
     ],
     expectedId: "mayfs"
+  },
+  {
+    description: "general youth justice support",
+    needTags: [
+      "case-management",
+      "psychology-support",
+      "speech-pathology"
+    ],
+    expectedId: "youth-justice-services"
   }
 ] as const;
 
@@ -142,12 +158,13 @@ describe("service dataset", () => {
     const ids = services.map(
       service => service.id
     );
-
+    // Update II 
     expect(ids).toEqual(
       expect.arrayContaining([
         "young-carer-support",
         "sa-youth-week",
-        "mayfs"
+        "mayfs",
+        "youth-justice-services"
       ])
     );
   });
@@ -163,7 +180,8 @@ describe("service dataset", () => {
       expect.arrayContaining([
         "young-carer-support",
         "sa-youth-week",
-        "mayfs"
+        "mayfs",
+        "youth-justice-services"
       ])
     );
   });

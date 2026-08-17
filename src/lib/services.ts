@@ -12,6 +12,9 @@ import saYouthWeekData from
 import mayfsData from
   "../data/services/mayfs.json";
 
+import youthJusticeData from
+  "../data/services/youth-justice-services.json";
+
 // Test Dataset young-carer-support.json 
 const youngCarerSupport =
   youngCarerSupportData as Service;
@@ -24,10 +27,15 @@ const saYouthWeek =
 const mayfs =
   mayfsData as Service;
 
+// Test Dataset mayfs.json
+const youthJustice =
+  youthJusticeData as Service;
+
 export const services: Service[] = [
   youngCarerSupport,
   saYouthWeek,
-  mayfs
+  mayfs,
+  youthJustice
 ];
 
 export function getAllServices(): Service[] {
