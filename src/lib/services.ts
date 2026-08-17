@@ -1,0 +1,69 @@
+import type {
+  Service,
+  ServiceCategory
+} from "../types/service";
+
+import youngCarerSupportData from
+  "../data/services/young-carer-support.json";
+
+const youngCarerSupport =
+  youngCarerSupportData as Service;
+
+export const services: Service[] = [
+  youngCarerSupport
+];
+
+export function getAllServices(): Service[] {
+  return services;
+}
+
+export function getServiceById(
+  id: string
+): Service | undefined {
+  return services.find(
+    service => service.id === id
+  );
+}
+
+export function getServiceBySlug(
+  slug: string
+): Service | undefined {
+  return services.find(
+    service => service.slug === slug
+  );
+}
+
+export function getServicesByCategory(
+  category: ServiceCategory
+): Service[] {
+  return services.filter(service =>
+    service.categories.includes(category)
+  );
+}
+
+export function getActiveServices(): Service[] {
+  return services.filter(
+    service =>
+      service.availabilityStatus === "active" ||
+      service.availabilityStatus === "seasonal"
+  );
+}
+
+export function getServicesByNeedTags(
+  needTags: string[]
+): Service[] {
+  return services
+    .map(service => {
+      const score = service.needTags.filter(tag =>
+        needTags.includes(tag)
+      ).length;
+
+      return {
+        service,
+        score
+      };
+    })
+    .filter(result => result.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(result => result.service);
+}
