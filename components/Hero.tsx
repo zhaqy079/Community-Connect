@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center">
 
-      <h1 className="pt-12 pb-6 font-bold text-[var(--cc-teal)] text-3xl md:text-5xl lg:text-6xl">
+      <h1 className="pt-8 pb-6 font-bold text-[var(--cc-teal)] text-3xl md:text-5xl lg:text-6xl">
         Community Connect
       </h1>
 
