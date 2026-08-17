@@ -1,12 +1,17 @@
 import Image from "next/image";
 
-export default function Logo() {
+type LogoProps = {
+    width?: number,
+    height?: number
+}
+
+export default function Logo({ width = 100, height = 100 }: LogoProps) {
     return (
         <div className="bg-white p-1 shadow-lg rounded-xl items-center justify-center inline-flex">
-            <Image 
+            <Image
                 src="/logo.svg"
-                width={140}
-                height={140}
+                width={width}
+                height={height}
                 alt="Community Connect"
             />
         </div>
