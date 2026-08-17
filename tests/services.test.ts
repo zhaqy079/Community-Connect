@@ -66,6 +66,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "disability-aged-care",
+    slug: "disability-aged-care",
+    name: "Disability Aged Care",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -202,6 +209,15 @@ const matchingCases = [
       "independent-living-skills"
     ],
     expectedId: "home-and-living"
+  },
+  {
+    description: "aged care for an older person with disability",
+    needTags: [
+      "disability-aged-care",
+      "older-person-with-disability",
+      "residential-aged-care"
+    ],
+    expectedId: "disability-aged-care"
   },
   {
     description: "young carer support",
@@ -460,7 +476,11 @@ describe("service dataset", () => {
         "ctsa",
         "community-centres",
         "itc",
-        "mhcc"
+        "mhcc",
+        "glassessa",
+        "companion-card",
+        "home-and-living",
+        "disability-aged-care"
       ])
     );
   });
@@ -514,7 +534,8 @@ describe("service dataset", () => {
         "itc",
         "glassessa",
         "companion-card",
-        "home-and-living"
+        "home-and-living",
+        "disability-aged-care"
       ])
     );
   });
@@ -542,6 +563,28 @@ describe("service dataset", () => {
     expect(
       service?.deliveryMethods
     ).toContain("home-visit");
+  });
+  // Test Disability main service - Disability Aged Care
+  test("Disability Aged Care includes funding options", () => {
+    const service = getServiceById(
+      "disability-aged-care"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.availabilityNote
+    ).toContain("My Aged Care");
+
+    expect(
+      service?.availabilityNote
+    ).toContain(
+      "Disability Supports for Older Australians"
+    );
+
+    expect(service?.regions).toContain(
+      "Northgate"
+    );
   });
 
   test("all IDs are unique", () => {

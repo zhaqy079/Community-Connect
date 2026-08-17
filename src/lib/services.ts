@@ -23,6 +23,8 @@ import companionCardData from
 import homeAndLivingData from
   "../data/services/home-and-living.json";
 
+import disabilityAgedCareData from
+  "../data/services/disability-aged-care.json";
 
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
@@ -72,6 +74,9 @@ const companionCard =
 const homeAndLiving =
   homeAndLivingData as Service;
 
+const disabilityAgedCare =
+  disabilityAgedCareData as Service;
+
 const youngCarerSupport =
   youngCarerSupportData as Service;
 
@@ -113,6 +118,7 @@ export const services: Service[] = [
   glassessa,
   companionCard,
   homeAndLiving,
+  disabilityAgedCare,
   youngCarerSupport,
   saYouthWeek,
   mayfs,
