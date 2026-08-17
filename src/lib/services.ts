@@ -30,6 +30,9 @@ import ctsaData from
 import communityCentresData from
   "../data/services/community-centres.json";
 
+import itcData from
+  "../data/services/itc.json";
+
 
 const youngCarerSupport =
   youngCarerSupportData as Service;
@@ -62,6 +65,8 @@ const ctsa =
 const communityCentres =
   communityCentresData as Service;
 
+const itc = itcData as Service;
+
 export const services: Service[] = [
   youngCarerSupport,
   saYouthWeek,
@@ -71,7 +76,8 @@ export const services: Service[] = [
   streetConnect,
   communityConnectionsProgram,
   ctsa,
-  communityCentres
+  communityCentres,
+  itc
 ];
 
 export function getAllServices(): Service[] {

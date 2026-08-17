@@ -1,0 +1,67 @@
+{
+  "id": "itc",
+  "slug": "interpreting-and-translating-centre",
+  "name": "Interpreting and Translating Centre",
+  "shortName": "ITC",
+  "provider": "Department of Human Services",
+  "resourceType": "service",
+  "categories": [
+    "community-support",
+    "disability-accessibility"
+  ],
+  "needTags": [
+    "language-support",
+    "interpreter",
+    "phone-interpreting",
+    "in-person-interpreting",
+    "document-translation",
+    "aboriginal-language-support",
+    "hospital-interpreting",
+    "legal-interpreting",
+    "multilingual-communication",
+    "language-barrier"
+  ],
+  "shortDescription": "Confidential interpreting and translating services for South Australians in more than 100 languages and dialects.",
+  "plainEnglishSummary": "If you need help communicating in another language, ITC may provide an interpreter for a meeting, phone call, hospital visit or legal appointment, or translate written documents.",
+  "audience": [
+    "South Australians who need spoken-language interpreting",
+    "People who need documents translated from or into English",
+    "Businesses and organisations requiring language services",
+    "People requiring some Aboriginal language interpreting services"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "In-person interpreting",
+    "Phone interpreting",
+    "Interpreting for meetings and appointments",
+    "Hospital and legal appointment interpreting",
+    "Document translation",
+    "Translation checking",
+    "Audio and video transcription",
+    "Multilingual typesetting",
+    "Subtitling and voiceover services",
+    "Aboriginal language interpreting"
+  ],
+  "deliveryMethods": [
+    "online",
+    "phone",
+    "in-person"
+  ],
+  "cost": "varies",
+  "availabilityStatus": "active",
+  "availabilityNote": "Office hours are Monday to Friday, 9:00 am to 5:00 pm. Online enquiries and booking requests can be submitted at any time. For same-day or next-day interpreting requests, call 1800 280 203. Fees depend on the language, service type, location, duration and complexity.",
+  "contact": {
+    "website": "https://translate.sa.gov.au/",
+    "phone": "1800 280 203",
+    "email": "itc@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "View booking options",
+    "url": "https://translate.sa.gov.au/"
+  },
+  "eligibilityNote": "Community Connect cannot confirm interpreter availability, turnaround time or cost. Contact ITC for a quote and to confirm whether the required language and service type are available. ITC does not provide Auslan interpreting; users requiring Auslan should contact an appropriate Auslan provider.",
+  "sourceUrl": "https://translate.sa.gov.au/",
+  "lastVerified": "2026-08-17"
+}

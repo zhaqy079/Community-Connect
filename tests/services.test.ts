@@ -80,6 +80,13 @@ const serviceCases = [
     name: "Community Centres",
     resourceType: "directory",
     shortName: undefined
+  },
+  {
+    id: "itc",
+    slug: "interpreting-and-translating-centre",
+    name: "Interpreting and Translating Centre",
+    resourceType: "service",
+    shortName: "ITC"
   }
 ] as const;
 
@@ -165,6 +172,15 @@ const matchingCases = [
       "meet-new-people"
     ],
     expectedId: "community-centres"
+  },
+  {
+    description: "interpreting and language support",
+    needTags: [
+      "language-barrier",
+      "interpreter",
+      "document-translation"
+    ],
+    expectedId: "itc"
   }
 ] as const;
 
@@ -266,7 +282,8 @@ describe("service dataset", () => {
         "street-connect",
         "community-connections-program",
         "ctsa",
-        "community-centres"
+        "community-centres",
+        "itc"
       ])
     );
   });
@@ -299,7 +316,8 @@ describe("service dataset", () => {
       expect.arrayContaining([
         "community-connections-program",
         "ctsa",
-        "community-centres"
+        "community-centres",
+        "itc"
       ])
     );
   });
@@ -313,8 +331,11 @@ describe("service dataset", () => {
       service => service.id
     );
 
-    expect(ids).toContain(
-      "ctsa"
+    expect(ids).toEqual(
+      expect.arrayContaining([
+        "ctsa",
+        "itc"
+      ])
     );
   });
   test("all IDs are unique", () => {
