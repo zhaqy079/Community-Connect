@@ -1,0 +1,64 @@
+{
+  "id": "community-connections-program",
+  "slug": "community-connections-program",
+  "name": "Community Connections Program",
+  "provider": "Department of Human Services",
+  "resourceType": "program",
+  "categories": [
+    "community-support"
+  ],
+  "needTags": [
+    "social-isolation",
+    "community-connection",
+    "social-connection",
+    "support-networks",
+    "community-activities",
+    "short-term-support",
+    "wellbeing-support",
+    "service-navigation",
+    "not-eligible-ndis",
+    "not-eligible-my-aged-care"
+  ],
+  "shortDescription": "Short-term support that helps South Australians strengthen their connections with local communities, social networks and services.",
+  "plainEnglishSummary": "If you feel isolated or need help becoming more involved in your community, this program may connect you with local activities, support groups, services and other people.",
+  "ageRange": {
+    "minimum": 18,
+    "maximum": 64
+  },
+  "audience": [
+    "South Australian residents aged 18 to 64",
+    "People who need short-term help building community and social connections",
+    "People who are not eligible for the NDIS or My Aged Care",
+    "Friends, family members and service agencies seeking to refer someone"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Community connection support",
+    "Connection with local activities",
+    "Connection with social and support groups",
+    "Service navigation and referrals",
+    "Short-term individual support",
+    "Help building sustainable support networks"
+  ],
+  "deliveryMethods": [
+    "phone",
+    "in-person",
+    "community-location"
+  ],
+  "cost": "unknown",
+  "availabilityStatus": "active",
+  "availabilityNote": "Support is generally available for up to 12 weeks. A Regional Coordinating Partner will help determine suitable support based on the participant's location and goals.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/community-programs/communityconnections/accessing-community-connections",
+    "email": "CommunityConnections@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Find a local program partner",
+    "url": "https://dhs.sa.gov.au/how-we-help/community-programs/communityconnections/partners"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. The program generally supports South Australians aged 18 to 64 who need short-term community connection support and are not eligible for programs such as the NDIS or My Aged Care. Contact the Regional Coordinating Partner in your area to confirm whether the program is suitable.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/community-programs/communityconnections/about-community-connections",
+  "lastVerified": "2026-08-17"
+}

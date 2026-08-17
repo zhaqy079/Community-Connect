@@ -1,0 +1,63 @@
+{
+  "id": "mayfs",
+  "slug": "metropolitan-aboriginal-youth-family-services",
+  "name": "Metropolitan Aboriginal Youth and Family Services",
+  "shortName": "MAYFS",
+  "provider": "Department of Human Services",
+  "resourceType": "service",
+  "categories": [
+    "youth-families-carers",
+    "community-support"
+  ],
+  "needTags": [
+    "aboriginal-youth-support",
+    "youth-justice-support",
+    "cultural-connection",
+    "family-support",
+    "youth-mentoring",
+    "education-training-employment",
+    "justice-system-navigation",
+    "social-connection",
+    "service-referrals"
+  ],
+  "shortDescription": "A culturally responsive service supporting Aboriginal young people and families to strengthen cultural connection and improve life outcomes.",
+  "plainEnglishSummary": "MAYFS works with Aboriginal young people and their families, particularly those at risk of contact with the youth justice system, to build cultural connection, access support and plan positive next steps.",
+  "audience": [
+    "Aboriginal young people who have had contact with the youth justice system",
+    "Aboriginal young people at risk of contact with the youth justice system",
+    "Families and carers of eligible young people"
+  ],
+  "regions": [
+    "Metropolitan Adelaide"
+  ],
+  "supportTypes": [
+    "Cultural mentoring",
+    "Family-inclusive case management",
+    "Cultural and recreational programs",
+    "Education, training and employment connections",
+    "Youth justice navigation and advocacy",
+    "Supported referrals to other services",
+    "Social participation and cultural connection"
+  ],
+  "deliveryMethods": [
+    "online",
+    "phone",
+    "in-person",
+    "community-location"
+  ],
+  "cost": "unknown",
+  "availabilityStatus": "active",
+  "availabilityNote": "Referrals may be made by young people, parents or carers, schools, community organisations, SAPOL and Youth Justice Courts.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/youth-justice/metropolitan-aboriginal-youth-and-family-services",
+    "phone": "1800 685 546",
+    "email": "mayfs.info@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Make a MAYFS referral",
+    "url": "https://dhssa.advancedforms.squiz.cloud/form/mayfs-referral"
+  },
+  "eligibilityNote": "The published service is for Aboriginal young people in metropolitan Adelaide who have had, or are at risk of, contact with the youth justice system. Community Connect cannot confirm eligibility; contact MAYFS or submit a referral for official advice.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/youth-justice/metropolitan-aboriginal-youth-and-family-services",
+  "lastVerified": "2026-08-17"
+}

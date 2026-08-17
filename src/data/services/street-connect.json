@@ -1,0 +1,55 @@
+{
+  "id": "street-connect",
+  "slug": "street-connect",
+  "name": "Street Connect",
+  "provider": "Toward Home Alliance",
+  "resourceType": "program",
+  "categories": [
+    "housing-homelessness",
+    "community-support"
+  ],
+  "needTags": [
+    "rough-sleeping-notification",
+    "someone-sleeping-rough",
+    "street-outreach",
+    "homelessness-outreach",
+    "welfare-concern",
+    "adelaide-cbd",
+    "north-adelaide",
+    "adelaide-parklands"
+  ],
+  "shortDescription": "An online notification service that helps specialist homelessness outreach workers connect with people sleeping rough in central Adelaide.",
+  "plainEnglishSummary": "If you have seen someone sleeping rough in the Adelaide CBD, North Adelaide or nearby parklands within the last 24 hours, you can notify Street Connect so outreach workers can offer support.",
+  "audience": [
+    "Members of the public who have recently seen someone sleeping rough",
+    "People concerned about someone sleeping rough in central Adelaide"
+  ],
+  "regions": [
+    "Adelaide CBD",
+    "North Adelaide",
+    "Adelaide parklands"
+  ],
+  "supportTypes": [
+    "Rough sleeping notifications",
+    "Specialist homelessness outreach",
+    "Connection with homelessness services",
+    "Outreach follow-up"
+  ],
+  "deliveryMethods": [
+    "online",
+    "community-location"
+  ],
+  "cost": "free",
+  "availabilityStatus": "active",
+  "availabilityNote": "Only submit a notification for someone seen sleeping rough within the last 24 hours. The outreach team aims to visit the person within 24 hours. Submit only one notification for the same observation.",
+  "contact": {
+    "website": "https://www.streetconnect.sa.gov.au/home/launch"
+  },
+  "primaryAction": {
+    "label": "Make a notification",
+    "url": "https://www.streetconnect.sa.gov.au/home/launch"
+  },
+  "eligibilityNote": "Street Connect is for notifying outreach services about someone recently seen sleeping rough in the Adelaide CBD, North Adelaide or surrounding parklands. It is not an emergency service and does not force people to move or remove their belongings. Call 000 if someone is in immediate danger.",
+  "sourceUrl": "https://www.streetconnect.sa.gov.au/home/launch",
+  "lastVerified": "2026-08-17"
+}

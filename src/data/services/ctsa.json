@@ -1,0 +1,63 @@
+{
+  "id": "ctsa",
+  "slug": "community-transport-south-australia",
+  "name": "Community Transport South Australia",
+  "shortName": "CTSA",
+  "provider": "Department of Human Services",
+  "resourceType": "service",
+  "categories": [
+    "community-support",
+    "disability-accessibility"
+  ],
+  "needTags": [
+    "community-transport",
+    "transport-disadvantage",
+    "accessible-transport",
+    "mobility-barriers",
+    "medical-appointment-transport",
+    "social-activity-transport",
+    "shopping-transport",
+    "job-interview-transport",
+    "transport-booking-support",
+    "independent-living"
+  ],
+  "shortDescription": "Transport assistance for South Australians who cannot drive, obtain help from another driver or use suitable public transport.",
+  "plainEnglishSummary": "If transport difficulties prevent you from attending appointments, shopping, joining community activities or going to a job interview, Community Transport South Australia may help you find or arrange suitable transport.",
+  "audience": [
+    "South Australians under 65 experiencing transport disadvantage",
+    "People unable to drive themselves or ask someone else to drive them",
+    "People unable to use public transport because of distance, mobility, cost or limited service availability",
+    "People aged 65 or over who are registered with My Aged Care"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Transport in a car with a worker or volunteer",
+    "Help finding suitable transport",
+    "Transport booking assistance",
+    "Connections with local transport services",
+    "Transport to medical appointments",
+    "Transport to shops and community facilities",
+    "Transport to social activities",
+    "Transport to job interviews"
+  ],
+  "deliveryMethods": [
+    "phone",
+    "in-person",
+    "community-location"
+  ],
+  "cost": "varies",
+  "availabilityStatus": "active",
+  "availabilityNote": "Fees may apply. Availability, booking requirements and service coverage depend on the Community Transport SA provider operating in the user's region.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/community-programs/communityconnections/community-transport-south-australia"
+  },
+  "primaryAction": {
+    "label": "Find your local transport provider",
+    "url": "https://dhs.sa.gov.au/how-we-help/community-programs/communityconnections/community-transport-south-australia"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. People under 65 generally need to live in South Australia and experience transport disadvantage. People aged 65 or over generally need to be registered with My Aged Care. Contact the provider in your region to confirm availability, eligibility and fees.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/community-programs/communityconnections/community-transport-south-australia",
+  "lastVerified": "2026-08-17"
+}
