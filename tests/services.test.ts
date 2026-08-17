@@ -73,6 +73,13 @@ const serviceCases = [
     name: "Community Transport South Australia",
     resourceType: "service",
     shortName: "CTSA"
+  },
+  {
+    id: "community-centres",
+    slug: "community-centres",
+    name: "Community Centres",
+    resourceType: "directory",
+    shortName: undefined
   }
 ] as const;
 
@@ -149,6 +156,15 @@ const matchingCases = [
       "mobility-barriers"
     ],
     expectedId: "ctsa"
+  },
+  {
+    description: "find a local community centre",
+    needTags: [
+      "local-community-centre",
+      "group-activities",
+      "meet-new-people"
+    ],
+    expectedId: "community-centres"
   }
 ] as const;
 
@@ -249,7 +265,8 @@ describe("service dataset", () => {
         "homeless-connect-sa",
         "street-connect",
         "community-connections-program",
-        "ctsa"
+        "ctsa",
+        "community-centres"
       ])
     );
   });
@@ -281,8 +298,8 @@ describe("service dataset", () => {
     expect(ids).toEqual(
       expect.arrayContaining([
         "community-connections-program",
-        "community-connections-program",
-        "ctsa"
+        "ctsa",
+        "community-centres"
       ])
     );
   });

@@ -1,0 +1,58 @@
+{
+  "id": "community-centres",
+  "slug": "community-centres",
+  "name": "Community Centres",
+  "provider": "Department of Human Services",
+  "resourceType": "directory",
+  "categories": [
+    "community-support"
+  ],
+  "needTags": [
+    "local-community-centre",
+    "community-activities",
+    "group-activities",
+    "social-connection",
+    "social-inclusion",
+    "wellbeing-activities",
+    "social-support",
+    "local-support",
+    "community-participation",
+    "meet-new-people"
+  ],
+  "shortDescription": "A directory of community centres across South Australia offering group activities focused on inclusion, wellbeing and social support.",
+  "plainEnglishSummary": "If you want to meet people, join local activities or find social support near you, this directory can help you find your nearest community centre.",
+  "audience": [
+    "South Australians looking for local community activities",
+    "People seeking social connection and community participation",
+    "People looking for nearby wellbeing or social support activities"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Community centre directory",
+    "Local group activities",
+    "Social connection activities",
+    "Wellbeing activities",
+    "Inclusive community participation",
+    "Local social support"
+  ],
+  "deliveryMethods": [
+    "online",
+    "in-person",
+    "community-location"
+  ],
+  "cost": "varies",
+  "availabilityStatus": "active",
+  "availabilityNote": "Activities, opening hours, accessibility and fees vary between community centres. Contact the selected centre before attending.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/community-programs/community-centres"
+  },
+  "primaryAction": {
+    "label": "Find a community centre",
+    "url": "https://communitycentressa.asn.au/find-a-centre"
+  },
+  "eligibilityNote": "Community Connect cannot confirm whether a particular activity is available or suitable. Contact the selected community centre to confirm its programs, accessibility, availability and any fees.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/community-programs/community-centres",
+  "lastVerified": "2026-08-17"
+}
