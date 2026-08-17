@@ -73,6 +73,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "allied-health",
+    slug: "allied-health",
+    name: "Allied Health",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -218,6 +225,15 @@ const matchingCases = [
       "residential-aged-care"
     ],
     expectedId: "disability-aged-care"
+  },
+  {
+    description: "disability allied health support",
+    needTags: [
+      "allied-health",
+      "occupational-therapy",
+      "physiotherapy"
+    ],
+    expectedId: "allied-health"
   },
   {
     description: "young carer support",
@@ -480,7 +496,8 @@ describe("service dataset", () => {
         "glassessa",
         "companion-card",
         "home-and-living",
-        "disability-aged-care"
+        "disability-aged-care",
+        "allied-health"
       ])
     );
   });
@@ -535,7 +552,8 @@ describe("service dataset", () => {
         "glassessa",
         "companion-card",
         "home-and-living",
-        "disability-aged-care"
+        "disability-aged-care",
+        "allied-health"
       ])
     );
   });
@@ -585,6 +603,26 @@ describe("service dataset", () => {
     expect(service?.regions).toContain(
       "Northgate"
     );
+  });
+  // Allied Health service
+  test("Allied Health includes its three core services", () => {
+    const service = getServiceById(
+      "allied-health"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(service?.supportTypes).toEqual(
+      expect.arrayContaining([
+        "Occupational therapy",
+        "Physiotherapy",
+        "Dietetics"
+      ])
+    );
+
+    expect(
+      service?.availabilityNote
+    ).toContain("NDIS");
   });
 
   test("all IDs are unique", () => {
