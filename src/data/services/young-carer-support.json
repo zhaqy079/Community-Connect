@@ -1,0 +1,57 @@
+{
+  "id": "young-carer-support",
+  "slug": "young-carer-support",
+  "name": "Young Carer Support Service",
+  "provider": "Department of Human Services",
+  "resourceType": "service",
+  "categories": [
+    "youth-families-carers",
+    "community-support"
+  ],
+  "needTags": [
+    "young-carer",
+    "caring-responsibilities",
+    "family-support",
+    "school-support",
+    "wellbeing",
+    "social-connection",
+    "peer-support"
+  ],
+  "shortDescription": "Free support for young carers through individual assistance, group activities and connections with other young people.",
+  "plainEnglishSummary": "If you help care for someone in your family, this service may help you get support, meet other young carers and feel more confident at school.",
+  "ageRange": {
+    "minimum": 5,
+    "maximum": 25
+  },
+  "audience": [
+    "Young carers aged 5 to 25"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "One-to-one support",
+    "Group activities",
+    "Peer support",
+    "School support",
+    "Community connection",
+    "Information and referrals"
+  ],
+  "deliveryMethods": [
+    "in-person",
+    "community-location"
+  ],
+  "cost": "free",
+  "availabilityStatus": "active",
+  "availabilityNote": "Support is generally available for up to 12 months and may be extended depending on individual circumstances.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/carers/young-carer-support"
+  },
+  "primaryAction": {
+    "label": "View program partners",
+    "url": "https://dhs.sa.gov.au/how-we-help/carers/young-carer-support"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. Contact an official program partner to check whether this service is suitable for your circumstances.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/carers/young-carer-support",
+  "lastVerified": "2026-08-17"
+}
