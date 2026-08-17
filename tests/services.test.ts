@@ -17,6 +17,13 @@ import {
 // Only change serviceCases and matchingCases when adding new test item.
 const serviceCases = [
   {
+    id: "cost-of-living",
+    slug: "cost-of-living",
+    name: "Cost of Living",
+    resourceType: "directory",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -91,6 +98,15 @@ const serviceCases = [
 ] as const;
 
 const matchingCases = [
+  {
+    description: "general cost of living support",
+    needTags: [
+      "household-bills",
+      "food-relief",
+      "financial-hardship"
+    ],
+    expectedId: "cost-of-living"
+  },
   {
     description: "young carer support",
     needTags: [
@@ -245,6 +261,20 @@ describe("service dataset", () => {
       );
     }
   );
+  // Test Cost of Living service.
+  test("includes expected cost of living resources", () => {
+    const services = getServicesByCategory(
+      "cost-of-living-concessions"
+    );
+
+    const ids = services.map(
+      service => service.id
+    );
+
+    expect(ids).toContain(
+      "cost-of-living"
+    );
+  });
 
   // Test "Youth" Related services.
   test("includes expected youth resources", () => {

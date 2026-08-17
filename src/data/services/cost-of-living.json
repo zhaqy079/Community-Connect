@@ -1,0 +1,60 @@
+{
+  "id": "cost-of-living",
+  "slug": "cost-of-living",
+  "name": "Cost of Living",
+  "provider": "Department of Human Services",
+  "resourceType": "directory",
+  "categories": [
+    "cost-of-living-concessions"
+  ],
+  "needTags": [
+    "cost-of-living-support",
+    "household-bills",
+    "financial-hardship",
+    "food-relief",
+    "rent-support",
+    "mortgage-support",
+    "concessions",
+    "no-interest-loans",
+    "financial-counselling",
+    "local-financial-assistance"
+  ],
+  "shortDescription": "A DHS information directory connecting South Australians with concessions, financial assistance, food relief and help with household expenses.",
+  "plainEnglishSummary": "If you are struggling with bills, food, rent, mortgage payments or other everyday costs, this page can help you explore relevant concessions and financial support services.",
+  "audience": [
+    "South Australians experiencing cost-of-living pressure",
+    "People having difficulty paying household bills",
+    "People seeking food or financial relief",
+    "People having difficulty paying rent or a mortgage",
+    "People looking for concessions or financial counselling"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Concession information",
+    "Household bill support information",
+    "Food relief information",
+    "Rent and mortgage support information",
+    "Financial hardship services",
+    "No Interest Loans information",
+    "Financial counselling information",
+    "Local financial assistance directory"
+  ],
+  "deliveryMethods": [
+    "online"
+  ],
+  "cost": "not-applicable",
+  "availabilityStatus": "active",
+  "availabilityNote": "This page is an information directory. Availability, fees and eligibility conditions vary across the concessions and services linked from the page.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/cost-of-living"
+  },
+  "primaryAction": {
+    "label": "Explore cost of living support",
+    "url": "https://dhs.sa.gov.au/how-we-help/cost-of-living"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility for concessions or financial assistance. Each linked program has its own eligibility requirements, application process and availability.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/cost-of-living",
+  "lastVerified": "2026-08-17"
+}
