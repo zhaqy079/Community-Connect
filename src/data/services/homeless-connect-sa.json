@@ -1,0 +1,59 @@
+{
+  "id": "homeless-connect-sa",
+  "slug": "homeless-connect-sa",
+  "name": "Homeless Connect SA",
+  "provider": "Uniting Communities",
+  "resourceType": "service",
+  "categories": [
+    "housing-homelessness",
+    "community-support"
+  ],
+  "needTags": [
+    "homelessness-support",
+    "housing-crisis",
+    "emergency-accommodation",
+    "service-referrals",
+    "short-term-assistance",
+    "domestic-violence-support",
+    "aboriginal-family-violence-support",
+    "youth-homelessness",
+    "mental-health-referral"
+  ],
+  "shortDescription": "A free 24/7 statewide telephone service providing information, short-term assistance and referrals for people experiencing homelessness in South Australia.",
+  "plainEnglishSummary": "If you are homeless, at risk of homelessness or need somewhere safe to stay, Homeless Connect SA may help you understand your options and connect with an appropriate homelessness service.",
+  "audience": [
+    "People experiencing homelessness in South Australia",
+    "People at risk of homelessness",
+    "People seeking information about homelessness support"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Homelessness information",
+    "Direct referrals to homelessness services",
+    "Short-term assistance",
+    "Domestic violence service referrals",
+    "Aboriginal family violence service referrals",
+    "Youth service referrals",
+    "Mental health support referrals"
+  ],
+  "deliveryMethods": [
+    "phone",
+    "online"
+  ],
+  "cost": "free",
+  "availabilityStatus": "active",
+  "availabilityNote": "The telephone service is available 24 hours a day, 7 days a week. The online enquiry form is intended for feedback and non-urgent enquiries.",
+  "contact": {
+    "website": "https://www.homelessconnectsa.org/",
+    "phone": "1800 003 308"
+  },
+  "primaryAction": {
+    "label": "Call Homeless Connect SA",
+    "phone": "1800 003 308"
+  },
+  "eligibilityNote": "Community Connect cannot confirm what assistance will be available. Contact Homeless Connect SA so they can assess your situation and connect you with relevant services. Call 000 if there is an immediate danger or emergency.",
+  "sourceUrl": "https://www.homelessconnectsa.org/",
+  "lastVerified": "2026-08-17"
+}

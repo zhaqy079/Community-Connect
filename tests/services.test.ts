@@ -45,6 +45,13 @@ const serviceCases = [
     name: "Youth Justice Services",
     resourceType: "service",
     shortName: undefined
+  },
+  {
+    id: "homeless-connect-sa",
+    slug: "homeless-connect-sa",
+    name: "Homeless Connect SA",
+    resourceType: "service",
+    shortName: undefined
   }
 ] as const;
 
@@ -85,6 +92,15 @@ const matchingCases = [
       "speech-pathology"
     ],
     expectedId: "youth-justice-services"
+  },
+  {
+    description: "homeless support",
+    needTags: [
+      "homelessness-support",
+      "housing-crisis",
+      "emergency-accommodation"
+    ],
+    expectedId: "homeless-connect-sa"
   }
 ] as const;
 
@@ -164,7 +180,7 @@ describe("service dataset", () => {
         "young-carer-support",
         "sa-youth-week",
         "mayfs",
-        "youth-justice-services"
+        "youth-justice-services",
       ])
     );
   });
@@ -181,8 +197,23 @@ describe("service dataset", () => {
         "young-carer-support",
         "sa-youth-week",
         "mayfs",
-        "youth-justice-services"
+        "youth-justice-services",
+        "homeless-connect-sa"
       ])
+    );
+  });
+
+  test("includes expected housing resources", () => {
+    const services = getServicesByCategory(
+      "housing-homelessness"
+    );
+
+    const ids = services.map(
+      service => service.id
+    );
+
+    expect(ids).toContain(
+      "homeless-connect-sa"
     );
   });
 
@@ -221,4 +252,5 @@ describe("service dataset", () => {
 
     expect(services).toHaveLength(0);
   });
+
 });
