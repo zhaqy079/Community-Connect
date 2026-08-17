@@ -20,6 +20,10 @@ import glassessaData from
 import companionCardData from
   "../data/services/companion-card.json";
 
+import homeAndLivingData from
+  "../data/services/home-and-living.json";
+
+
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
 
@@ -65,6 +69,9 @@ const glassessa = glassessaData as Service;
 const companionCard =
   companionCardData as Service;
 
+const homeAndLiving =
+  homeAndLivingData as Service;
+
 const youngCarerSupport =
   youngCarerSupportData as Service;
 
@@ -105,6 +112,7 @@ export const services: Service[] = [
   eeps,
   glassessa,
   companionCard,
+  homeAndLiving,
   youngCarerSupport,
   saYouthWeek,
   mayfs,

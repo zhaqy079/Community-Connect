@@ -59,6 +59,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "home-and-living",
+    slug: "home-and-living",
+    name: "Home and Living",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -186,6 +193,15 @@ const matchingCases = [
       "lifelong-attendant-care"
     ],
     expectedId: "companion-card"
+  },
+  {
+    description: "supported independent living",
+    needTags: [
+      "supported-independent-living",
+      "daily-living-support",
+      "independent-living-skills"
+    ],
+    expectedId: "home-and-living"
   },
   {
     description: "young carer support",
@@ -497,10 +513,37 @@ describe("service dataset", () => {
         "ctsa",
         "itc",
         "glassessa",
-        "companion-card"
+        "companion-card",
+        "home-and-living"
       ])
     );
   });
+
+  // Test Disability main service - home and living
+  test("Home and Living contains service coverage details", () => {
+    const service = getServiceById(
+      "home-and-living"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(service?.regions).toEqual(
+      expect.arrayContaining([
+        "Metropolitan Adelaide",
+        "Kadina",
+        "Mount Gambier"
+      ])
+    );
+
+    expect(
+      service?.availabilityNote
+    ).toContain("24 hours");
+
+    expect(
+      service?.deliveryMethods
+    ).toContain("home-visit");
+  });
+
   test("all IDs are unique", () => {
     const ids = getAllServices().map(
       service => service.id
