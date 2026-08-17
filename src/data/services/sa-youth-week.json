@@ -1,0 +1,58 @@
+{
+  "id": "sa-youth-week",
+  "slug": "sa-youth-week",
+  "name": "SA Youth Week",
+  "provider": "Department of Human Services",
+  "resourceType": "event",
+  "categories": [
+    "youth-families-carers",
+    "community-support"
+  ],
+  "needTags": [
+    "youth-activities",
+    "community-participation",
+    "social-connection",
+    "arts-and-culture",
+    "technology-activities",
+    "sport-and-recreation"
+  ],
+  "shortDescription": "An annual South Australian celebration featuring activities created by and for young people aged 12 to 25.",
+  "plainEnglishSummary": "SA Youth Week offers activities where young people can connect, participate and celebrate their ideas, talents and contributions.",
+  "ageRange": {
+    "minimum": 12,
+    "maximum": 25
+  },
+  "audience": [
+    "Young people aged 12 to 25",
+    "Community organisations supporting young people"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Community activities",
+    "Arts and cultural activities",
+    "Technology activities",
+    "Sport and recreation",
+    "Youth participation",
+    "Social connection"
+  ],
+  "deliveryMethods": [
+    "in-person",
+    "community-location"
+  ],
+  "cost": "varies",
+  "availabilityStatus": "seasonal",
+  "availabilityNote": "SA Youth Week 2026 has finished. Information about SA Youth Week 2027 will be published when available.",
+  "contact": {
+    "website": "https://dhs.sa.gov.au/how-we-help/youth/sa-youth-week",
+    "email": "youthactionplan@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "View SA Youth Week information",
+    "url": "https://dhs.sa.gov.au/how-we-help/youth/sa-youth-week"
+  },
+  "eligibilityNote": "Activities and participation requirements may vary. Check the official event information or contact the relevant event organiser before attending.",
+  "sourceUrl": "https://dhs.sa.gov.au/how-we-help/youth/sa-youth-week",
+  "lastVerified": "2026-08-17"
+}
