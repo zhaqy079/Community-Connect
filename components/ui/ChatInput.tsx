@@ -43,7 +43,7 @@ export default function ChatInput() {
 
             <div className="pb-2">
                 <SupportSuggestions
-                    onSelect={(suggestion) => setMessage(`I need help with ${suggestion.label.toLowerCase()}.`)}
+                    onSelect={(suggestion) => setMessage(suggestion.prompt)}
                 />
             </div>
 
