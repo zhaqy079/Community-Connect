@@ -80,6 +80,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "community-nursing",
+    slug: "community-nursing",
+    name: "Community Nursing",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -234,6 +241,15 @@ const matchingCases = [
       "physiotherapy"
     ],
     expectedId: "allied-health"
+  },
+  {
+    description: "disability nursing care at home",
+    needTags: [
+      "community-nursing",
+      "nursing-at-home",
+      "wound-care"
+    ],
+    expectedId: "community-nursing"
   },
   {
     description: "young carer support",
@@ -497,7 +513,8 @@ describe("service dataset", () => {
         "companion-card",
         "home-and-living",
         "disability-aged-care",
-        "allied-health"
+        "allied-health",
+        "community-nursing"
       ])
     );
   });
@@ -553,7 +570,8 @@ describe("service dataset", () => {
         "companion-card",
         "home-and-living",
         "disability-aged-care",
-        "allied-health"
+        "allied-health",
+        "community-nursing"
       ])
     );
   });
@@ -643,6 +661,31 @@ describe("service dataset", () => {
     expect(new Set(slugs).size).toBe(
       slugs.length
     );
+  });
+
+  // Community Nursing
+  test("Community Nursing includes home-based care", () => {
+    const service = getServiceById(
+      "community-nursing"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.deliveryMethods
+    ).toContain("home-visit");
+
+    expect(service?.supportTypes).toEqual(
+      expect.arrayContaining([
+        "Wound management",
+        "Diabetes management",
+        "Medication management"
+      ])
+    );
+
+    expect(
+      service?.availabilityNote
+    ).toContain("NDIS");
   });
 
   test("all services have HTTPS source URLs", () => {

@@ -25,8 +25,12 @@ import homeAndLivingData from
 
 import disabilityAgedCareData from
   "../data/services/disability-aged-care.json";
+
 import alliedHealthData from
   "../data/services/allied-health.json";
+
+import communityNursingData from
+  "../data/services/community-nursing.json";
 
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
@@ -82,6 +86,9 @@ const disabilityAgedCare =
 const alliedHealth =
   alliedHealthData as Service;
 
+const communityNursing =
+  communityNursingData as Service;
+
 const youngCarerSupport =
   youngCarerSupportData as Service;
 
@@ -125,6 +132,7 @@ export const services: Service[] = [
   homeAndLiving,
   disabilityAgedCare,
   alliedHealth,
+  communityNursing,
   youngCarerSupport,
   saYouthWeek,
   mayfs,
