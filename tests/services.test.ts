@@ -31,6 +31,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "mhcc",
+    slug: "medical-heating-cooling-concession",
+    name: "Medical Heating and Cooling Concession",
+    resourceType: "concession",
+    shortName: "MHCC"
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -122,6 +129,15 @@ const matchingCases = [
       "energy-concession"
     ],
     expectedId: "energy-bill-concession"
+  },
+  {
+    description: "medical heating and cooling costs",
+    needTags: [
+      "medical-heating-cooling",
+      "temperature-sensitive-medical-condition",
+      "medical-certification"
+    ],
+    expectedId: "mhcc"
   },
   {
     description: "young carer support",
@@ -290,11 +306,27 @@ describe("service dataset", () => {
     expect(ids).toEqual(
       expect.arrayContaining([
         "cost-of-living",
-        "energy-bill-concession"
+        "energy-bill-concession",
+        "mhcc"
       ])
     );
   });
+  // Test MHCC concession fee 
+  test("MHCC contains the verified 2026 amount", () => {
+    const service = getServiceById(
+      "mhcc"
+    );
 
+    expect(service).toBeDefined();
+
+    expect(
+      service?.availabilityNote
+    ).toContain("$291.27");
+
+    expect(service?.lastVerified).toBe(
+      "2026-08-17"
+    );
+  });
   // Test "Youth" Related services.
   test("includes expected youth resources", () => {
     const services = getServicesByCategory(
@@ -334,7 +366,8 @@ describe("service dataset", () => {
         "community-connections-program",
         "ctsa",
         "community-centres",
-        "itc"
+        "itc",
+        "mhcc"
       ])
     );
   });

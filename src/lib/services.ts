@@ -8,6 +8,9 @@ import costOfLivingData from
 import energyBillConcessionData from
   "../data/services/energy-bill-concession.json";
 
+import mhccData from
+  "../data/services/mhcc.json";
+
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
 
@@ -43,6 +46,8 @@ const costOfLiving =
 
 const energyBillConcession =
   energyBillConcessionData as Service;
+
+const mhcc = mhccData as Service;
 
 const youngCarerSupport =
   youngCarerSupportData as Service;
@@ -80,6 +85,7 @@ const itc = itcData as Service;
 export const services: Service[] = [
   costOfLiving,
   energyBillConcession,
+  mhcc,
   youngCarerSupport,
   saYouthWeek,
   mayfs,

@@ -1,0 +1,60 @@
+{
+  "id": "mhcc",
+  "slug": "medical-heating-cooling-concession",
+  "name": "Medical Heating and Cooling Concession",
+  "shortName": "MHCC",
+  "provider": "Department of Human Services",
+  "resourceType": "concession",
+  "categories": [
+    "cost-of-living-concessions",
+    "disability-accessibility"
+  ],
+  "needTags": [
+    "medical-heating-cooling",
+    "medical-energy-costs",
+    "temperature-sensitive-medical-condition",
+    "frequent-heating-cooling",
+    "air-conditioning-medical-need",
+    "medical-certification",
+    "energy-bills",
+    "low-income",
+    "fixed-income",
+    "disability-related-costs"
+  ],
+  "shortDescription": "A concession of $291.27 per year for eligible South Australians who need frequent heating or cooling because of a clinically verified medical condition.",
+  "plainEnglishSummary": "If hot or cold weather severely worsens your medical condition, and you need to use heating or cooling regularly at home, you may be able to receive $291.27 per year toward your energy costs.",
+  "audience": [
+    "South Australians on a low or fixed income",
+    "People with a qualifying medical condition that is severely worsened by hot or cold weather",
+    "Parents or legal guardians of a child with a qualifying medical condition",
+    "People financially responsible for all or part of their household energy bill"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Medical heating and cooling concession",
+    "Assistance with medically necessary energy costs",
+    "Financial support for frequent home heating or cooling",
+    "Additional support alongside the Energy Bill Concession"
+  ],
+  "deliveryMethods": [
+    "online",
+    "phone"
+  ],
+  "cost": "not-applicable",
+  "availabilityStatus": "active",
+  "availabilityNote": "At the last verification date of 17 August 2026, the concession amount was $291.27 per year. It is indexed each financial year and is available in addition to the Energy Bill Concession. A medical practitioner must help complete and certify the application.",
+  "contact": {
+    "website": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/medical-heating-and-cooling-concession",
+    "phone": "1300 735 350",
+    "email": "MHC@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Check eligibility and apply",
+    "url": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/medical-heating-and-cooling-concession"
+  },
+  "eligibilityNote": "Community Connect cannot confirm medical or financial eligibility. Applicants generally need to live at the application address, be financially responsible for part or all of the energy bill, hold an eligible concession card or receive an eligible payment, and have a medical practitioner certify that hot or cold weather severely worsens the qualifying medical condition.",
+  "sourceUrl": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/medical-heating-and-cooling-concession",
+  "lastVerified": "2026-08-17"
+}
