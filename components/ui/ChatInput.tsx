@@ -2,21 +2,23 @@
 
 import { useRouter } from "next/navigation"
 
+import { useState } from "react";
+import SupportSuggestions from "./SupportSuggestions";
+
 export default function ChatInput() {
 
     const router = useRouter();
 
+    const [message, setMessage] = useState("");
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const form = e.currentTarget;
-        const textarea = form.elements.namedItem("message") as HTMLTextAreaElement;
+        const trimmedMessage = message.trim();
 
-        const message = textarea.value.trim();
+        if (!trimmedMessage) return;
 
-        if (!message) return;
-
-        router.push(`/chat?message=${encodeURIComponent(message)}`);
+        router.push(`/chat?message=${encodeURIComponent(trimmedMessage)}`);
     };
 
     return (
@@ -26,6 +28,8 @@ export default function ChatInput() {
         >
             <textarea
                 name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 // TODO: For the placeholder message, maybe we can do random question/phrases - housing, care support, allowances etc.
                 placeholder={"e.g I need help with housing..."}
                 rows={3}
@@ -37,13 +41,20 @@ export default function ChatInput() {
                 "
             />
 
+            <div className="pb-2">
+                <SupportSuggestions
+                    onSelect={(suggestion) => setMessage(`I need help with ${suggestion.label.toLowerCase()}.`)}
+                />
+            </div>
+
             <div className="mt-2 flex justify-end">
                 <button
                     type="submit"
-                    className="rounded-xl px-6 py-3 text-white font-bold
+                    className="rounded-full px-6 py-3 text-white font-bold
                     bg-[var(--cc-teal)]                  
                     transition
                     hover:brightness-90
+                    hover:scale-105
                     "
                 >
                     {"FIND SUPPORT"}
