@@ -52,6 +52,13 @@ const serviceCases = [
     name: "Homeless Connect SA",
     resourceType: "service",
     shortName: undefined
+  },
+  {
+    id: "street-connect",
+    slug: "street-connect",
+    name: "Street Connect",
+    resourceType: "program",
+    shortName: undefined
   }
 ] as const;
 
@@ -101,6 +108,15 @@ const matchingCases = [
       "emergency-accommodation"
     ],
     expectedId: "homeless-connect-sa"
+  },
+  {
+    description: "someone sleeping rough",
+    needTags: [
+      "rough-sleeping-notification",
+      "someone-sleeping-rough",
+      "street-outreach"
+    ],
+    expectedId: "street-connect"
   }
 ] as const;
 
@@ -198,7 +214,8 @@ describe("service dataset", () => {
         "sa-youth-week",
         "mayfs",
         "youth-justice-services",
-        "homeless-connect-sa"
+        "homeless-connect-sa",
+        "street-connect"
       ])
     );
   });
@@ -213,7 +230,7 @@ describe("service dataset", () => {
     );
 
     expect(ids).toContain(
-      "homeless-connect-sa"
+      "homeless-connect-sa",
     );
   });
 
