@@ -38,6 +38,13 @@ const serviceCases = [
     shortName: "MHCC"
   },
   {
+    id: "eeps",
+    slug: "emergency-electricity-payment-scheme",
+    name: "Emergency Electricity Payment Scheme",
+    resourceType: "program",
+    shortName: "EEPS"
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -138,6 +145,15 @@ const matchingCases = [
       "medical-certification"
     ],
     expectedId: "mhcc"
+  },
+  {
+    description: "electricity disconnection emergency",
+    needTags: [
+      "electricity-debt",
+      "electricity-disconnection",
+      "risk-of-disconnection"
+    ],
+    expectedId: "eeps"
   },
   {
     description: "young carer support",
@@ -307,7 +323,8 @@ describe("service dataset", () => {
       expect.arrayContaining([
         "cost-of-living",
         "energy-bill-concession",
-        "mhcc"
+        "mhcc",
+        "eeps"
       ])
     );
   });
@@ -325,6 +342,29 @@ describe("service dataset", () => {
 
     expect(service?.lastVerified).toBe(
       "2026-08-17"
+    );
+  });
+
+  // Test EEPS concession fee
+  test("EEPS contains emergency payment details", () => {
+    const service = getServiceById("eeps");
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.availabilityNote
+    ).toContain("$800");
+
+    expect(
+      service?.availabilityNote
+    ).toContain("two years");
+
+    expect(
+      service?.eligibilityNote
+    ).toContain("financial counsellor");
+
+    expect(service?.primaryAction.phone).toBe(
+      "1800 007 007"
     );
   });
   // Test "Youth" Related services.
