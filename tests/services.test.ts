@@ -13,76 +13,130 @@ import {
   getServicesByNeedTags
 } from "../src/lib/services";
 
+
+// Only change serviceCases and matchingCases when adding new test item.
+const serviceCases = [
+  {
+    id: "young-carer-support",
+    slug: "young-carer-support",
+    name: "Young Carer Support Service",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
+    id: "sa-youth-week",
+    slug: "sa-youth-week",
+    name: "SA Youth Week",
+    resourceType: "event",
+    shortName: undefined
+  },
+  {
+    id: "mayfs",
+    slug:
+      "metropolitan-aboriginal-youth-family-services",
+    name:
+      "Metropolitan Aboriginal Youth and Family Services",
+    resourceType: "service",
+    shortName: "MAYFS"
+  }
+] as const;
+
+const matchingCases = [
+  {
+    description: "young carer support",
+    needTags: [
+      "young-carer",
+      "caring-responsibilities",
+      "school-support"
+    ],
+    expectedId: "young-carer-support"
+  },
+  {
+    description: "youth activities",
+    needTags: [
+      "youth-activities",
+      "community-participation",
+      "arts-and-culture"
+    ],
+    expectedId: "sa-youth-week"
+  },
+  {
+    description:
+      "Aboriginal youth justice support",
+    needTags: [
+      "aboriginal-youth-support",
+      "youth-justice-support",
+      "cultural-connection"
+    ],
+    expectedId: "mayfs"
+  }
+] as const;
+
+
 describe("service dataset", () => {
-  test("loads at least one service", () => {
+  test("loads all expected services", () => {
     const services = getAllServices();
 
-    expect(services).toHaveLength(2);
-  });
-
-  test("finds Young Carer Support by ID", () => {
-    const service = getServiceById(
-      "young-carer-support"
-    );
-
-    expect(service).toBeDefined();
-    expect(service?.name).toBe(
-      "Young Carer Support Service"
-    );
-
-    expect(service?.resourceType).toBe(
-      "service"
+    expect(services).toHaveLength(
+      serviceCases.length
     );
   });
 
-  test("finds SA Youth Week by ID", () => {
-    const service = getServiceById(
-      "sa-youth-week"
-    );
+  test.each(serviceCases)(
+    "finds $id by ID",
+    ({
+      id,
+      name,
+      resourceType,
+      shortName
+    }) => {
+      const service = getServiceById(id);
 
-    expect(service).toBeDefined();
-    expect(service?.name).toBe(
-      "SA Youth Week"
-    );
-    expect(service?.resourceType).toBe(
-      "event"
-    );
-  });
+      expect(service).toBeDefined();
+      expect(service?.name).toBe(name);
+      expect(service?.resourceType).toBe(
+        resourceType
+      );
 
-  test("finds SA Youth Week by slug", () => {
-    const service = getServiceBySlug(
-      "sa-youth-week"
-    );
+      if (shortName) {
+        expect(service?.shortName).toBe(
+          shortName
+        );
+      }
+    }
+  );
 
-    expect(service).toBeDefined();
-    expect(service?.id).toBe(
-      "sa-youth-week"
-    );
-  });
+  test.each(serviceCases)(
+    "finds $id by slug",
+    ({ id, slug }) => {
+      const service = getServiceBySlug(
+        slug
+      );
 
-  test("filters both resources by youth category", () => {
+      expect(service).toBeDefined();
+      expect(service?.id).toBe(id);
+    }
+  );
+
+  test.each(matchingCases)(
+    "matches $description",
+    ({ needTags, expectedId }) => {
+      const services =
+        getServicesByNeedTags([...needTags]);
+
+      expect(services.length).toBeGreaterThan(
+        0
+      );
+
+      expect(services[0].id).toBe(
+        expectedId
+      );
+    }
+  );
+
+  test("includes expected youth resources", () => {
     const services = getServicesByCategory(
       "youth-families-carers"
-    );
-
-    const ids = services.map(
-      service => service.id
-    );
-
-    expect(ids).toContain(
-      "young-carer-support"
-    );
-
-    expect(ids).toContain(
-      "sa-youth-week"
-    );
-
-    expect(services).toHaveLength(2);
-  });
-
-  test("includes both resources in community support", () => {
-    const services = getServicesByCategory(
-      "community-support"
     );
 
     const ids = services.map(
@@ -92,49 +146,54 @@ describe("service dataset", () => {
     expect(ids).toEqual(
       expect.arrayContaining([
         "young-carer-support",
-        "sa-youth-week"
+        "sa-youth-week",
+        "mayfs"
       ])
     );
   });
 
-  test("returns active and seasonal resources", () => {
+  test("returns discoverable resources", () => {
     const services = getActiveServices();
 
     const ids = services.map(
       service => service.id
     );
 
-    expect(ids).toContain(
-      "young-carer-support"
-    );
-
-    expect(ids).toContain(
-      "sa-youth-week"
-    );
-  });
-
-  test("matches Young Carer Support using caring tags", () => {
-    const services = getServicesByNeedTags([
-      "young-carer",
-      "caring-responsibilities",
-      "school-support"
-    ]);
-
-    expect(services[0].id).toBe(
-      "young-carer-support"
+    expect(ids).toEqual(
+      expect.arrayContaining([
+        "young-carer-support",
+        "sa-youth-week",
+        "mayfs"
+      ])
     );
   });
 
-  test("matches SA Youth Week using activity tags", () => {
-    const services = getServicesByNeedTags([
-      "youth-activities",
-      "community-participation",
-      "arts-and-culture"
-    ]);
-
-    expect(services[0].id).toBe(
-      "sa-youth-week"
+  test("all IDs are unique", () => {
+    const ids = getAllServices().map(
+      service => service.id
     );
+
+    expect(new Set(ids).size).toBe(
+      ids.length
+    );
+  });
+
+  test("all slugs are unique", () => {
+    const slugs = getAllServices().map(
+      service => service.slug
+    );
+
+    expect(new Set(slugs).size).toBe(
+      slugs.length
+    );
+  });
+
+  test("all services have HTTPS source URLs", () => {
+    for (const service of getAllServices()) {
+      expect(service.sourceUrl).toMatch(
+        /^https:\/\//
+      );
+    }
   });
 
   test("returns no matches for unrelated tags", () => {

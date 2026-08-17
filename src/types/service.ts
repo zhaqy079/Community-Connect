@@ -57,6 +57,7 @@ export type Service = {
   id: string;
   slug: string;
   name: string;
+  shortName?: string;
   provider: string;
 
   // Classification
