@@ -6,12 +6,11 @@ export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center">
 
-            <h1 className="py-6 font-bold text-[var(--cc-teal)] text-3xl md:text-5xl lg:text-6xl">
+      <h1 className="pt-12 pb-6 font-bold text-[var(--cc-teal)] text-3xl md:text-5xl lg:text-6xl">
         Community Connect
       </h1>
 
-      <Logo/>
-
+      <Logo />
 
       <p className="max-w-2xl text-lg pt-6 text-[var(--cc-text-light)]">
         Helping people discover local services, support, and community
@@ -22,7 +21,7 @@ export default function Hero() {
         Describe what you're looking for and we'll help you find the right support.
       </p>
 
-      <ChatInput/>
+      <ChatInput />
 
     </section>
   )
