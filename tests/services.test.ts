@@ -66,6 +66,13 @@ const serviceCases = [
     name: "Community Connections Program",
     resourceType: "program",
     shortName: undefined
+  },
+  {
+    id: "ctsa",
+    slug: "community-transport-south-australia",
+    name: "Community Transport South Australia",
+    resourceType: "service",
+    shortName: "CTSA"
   }
 ] as const;
 
@@ -133,6 +140,15 @@ const matchingCases = [
       "not-eligible-my-aged-care"
     ],
     expectedId: "community-connections-program"
+  },
+  {
+    description: "community transport assistance",
+    needTags: [
+      "community-transport",
+      "transport-disadvantage",
+      "mobility-barriers"
+    ],
+    expectedId: "ctsa"
   }
 ] as const;
 
@@ -198,6 +214,7 @@ describe("service dataset", () => {
     }
   );
 
+  // Test "Youth" Related services.
   test("includes expected youth resources", () => {
     const services = getServicesByCategory(
       "youth-families-carers"
@@ -206,7 +223,6 @@ describe("service dataset", () => {
     const ids = services.map(
       service => service.id
     );
-    // Update II 
     expect(ids).toEqual(
       expect.arrayContaining([
         "young-carer-support",
@@ -231,7 +247,9 @@ describe("service dataset", () => {
         "mayfs",
         "youth-justice-services",
         "homeless-connect-sa",
-        "street-connect"
+        "street-connect",
+        "community-connections-program",
+        "ctsa"
       ])
     );
   });
@@ -250,6 +268,7 @@ describe("service dataset", () => {
     );
   });
 
+  // Test community services 
   test("includes expected community resources", () => {
     const services = getServicesByCategory(
       "community-support"
@@ -261,11 +280,26 @@ describe("service dataset", () => {
 
     expect(ids).toEqual(
       expect.arrayContaining([
-        "community-connections-program"
+        "community-connections-program",
+        "community-connections-program",
+        "ctsa"
       ])
     );
   });
+  // Test Disability and accessibility
+  test("includes expected accessibility resources", () => {
+    const services = getServicesByCategory(
+      "disability-accessibility"
+    );
 
+    const ids = services.map(
+      service => service.id
+    );
+
+    expect(ids).toContain(
+      "ctsa"
+    );
+  });
   test("all IDs are unique", () => {
     const ids = getAllServices().map(
       service => service.id
