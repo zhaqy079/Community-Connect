@@ -2,6 +2,35 @@ import type {
   Service,
   ServiceCategory
 } from "../types/service";
+import costOfLivingData from
+  "../data/services/cost-of-living.json";
+
+import energyBillConcessionData from
+  "../data/services/energy-bill-concession.json";
+
+import mhccData from
+  "../data/services/mhcc.json";
+
+import eepsData from
+  "../data/services/eeps.json";
+
+import glassessaData from
+  "../data/services/glassessa.json";
+
+import companionCardData from
+  "../data/services/companion-card.json";
+
+import homeAndLivingData from
+  "../data/services/home-and-living.json";
+
+import disabilityAgedCareData from
+  "../data/services/disability-aged-care.json";
+
+import alliedHealthData from
+  "../data/services/allied-health.json";
+
+import communityNursingData from
+  "../data/services/community-nursing.json";
 
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
@@ -33,6 +62,32 @@ import communityCentresData from
 import itcData from
   "../data/services/itc.json";
 
+const costOfLiving =
+  costOfLivingData as Service;
+
+const energyBillConcession =
+  energyBillConcessionData as Service;
+
+const mhcc = mhccData as Service;
+
+const eeps = eepsData as Service;
+
+const glassessa = glassessaData as Service;
+
+const companionCard =
+  companionCardData as Service;
+
+const homeAndLiving =
+  homeAndLivingData as Service;
+
+const disabilityAgedCare =
+  disabilityAgedCareData as Service;
+
+const alliedHealth =
+  alliedHealthData as Service;
+
+const communityNursing =
+  communityNursingData as Service;
 
 const youngCarerSupport =
   youngCarerSupportData as Service;
@@ -68,6 +123,16 @@ const communityCentres =
 const itc = itcData as Service;
 
 export const services: Service[] = [
+  costOfLiving,
+  energyBillConcession,
+  mhcc,
+  eeps,
+  glassessa,
+  companionCard,
+  homeAndLiving,
+  disabilityAgedCare,
+  alliedHealth,
+  communityNursing,
   youngCarerSupport,
   saYouthWeek,
   mayfs,

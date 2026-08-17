@@ -1,0 +1,63 @@
+{
+  "id": "disability-aged-care",
+  "slug": "disability-aged-care",
+  "name": "Disability Aged Care",
+  "provider": "DHS Disability Services",
+  "resourceType": "service",
+  "categories": [
+    "disability-accessibility"
+  ],
+  "needTags": [
+    "disability-aged-care",
+    "older-person-with-disability",
+    "residential-aged-care",
+    "high-support-needs",
+    "independent-living",
+    "disability-support-workers",
+    "my-aged-care",
+    "dsoa-funding",
+    "northgate-aged-care",
+    "social-activities"
+  ],
+  "shortDescription": "Aged care and disability support that helps older South Australians with disability live as independently as possible.",
+  "plainEnglishSummary": "If you are over 65 and living with disability, DHS Disability Services may help you explore suitable aged care support. Residential care at Northgate may be available for people requiring a high level of assistance.",
+  "audience": [
+    "South Australians over 65 who are living with disability",
+    "Older people with disability who need help living independently",
+    "People with high support needs seeking residential aged care",
+    "People accessing My Aged Care or Disability Supports for Older Australians"
+  ],
+  "regions": [
+    "South Australia",
+    "Northgate"
+  ],
+  "supportTypes": [
+    "Disability support for older people",
+    "Support with independent living",
+    "Residential aged care",
+    "High-level daily support",
+    "Disability support workers",
+    "Community living",
+    "Social activities",
+    "Help exploring aged care and funding options"
+  ],
+  "deliveryMethods": [
+    "in-person",
+    "community-location"
+  ],
+  "cost": "varies",
+  "availabilityStatus": "active",
+  "availabilityNote": "Support is provided through funding arrangements including My Aged Care and Disability Supports for Older Australians. Residential aged care at Northgate may be available for people with high support needs. Service access, costs and placement availability depend on individual assessment, funding and vacancies.",
+  "contact": {
+    "website": "https://dhsdisabilityservices.sa.gov.au/our-services/disability-aged-care",
+    "phone": "1800 952 962",
+    "email": "DHSDisabilityServices@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Enquire about Disability Aged Care",
+    "url": "https://dhsdisabilityservices.sa.gov.au/our-services/disability-aged-care"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility, funding or residential placement. This service is intended for older South Australians with disability. Contact DHS Disability Services to discuss age requirements, support needs, My Aged Care or DSOA funding, costs and current vacancies.",
+  "sourceUrl": "https://dhsdisabilityservices.sa.gov.au/our-services/disability-aged-care",
+  "lastVerified": "2026-08-17"
+}

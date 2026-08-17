@@ -17,6 +17,76 @@ import {
 // Only change serviceCases and matchingCases when adding new test item.
 const serviceCases = [
   {
+    id: "cost-of-living",
+    slug: "cost-of-living",
+    name: "Cost of Living",
+    resourceType: "directory",
+    shortName: undefined
+  },
+  {
+    id: "energy-bill-concession",
+    slug: "energy-bill-concession",
+    name: "Energy Bill Concession",
+    resourceType: "concession",
+    shortName: undefined
+  },
+  {
+    id: "mhcc",
+    slug: "medical-heating-cooling-concession",
+    name: "Medical Heating and Cooling Concession",
+    resourceType: "concession",
+    shortName: "MHCC"
+  },
+  {
+    id: "eeps",
+    slug: "emergency-electricity-payment-scheme",
+    name: "Emergency Electricity Payment Scheme",
+    resourceType: "program",
+    shortName: "EEPS"
+  },
+  {
+    id: "glassessa",
+    slug: "glassessa",
+    name: "GlassesSA",
+    resourceType: "program",
+    shortName: undefined
+  },
+  {
+    id: "companion-card",
+    slug: "companion-card",
+    name: "Companion Card",
+    resourceType: "program",
+    shortName: undefined
+  },
+  {
+    id: "home-and-living",
+    slug: "home-and-living",
+    name: "Home and Living",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
+    id: "disability-aged-care",
+    slug: "disability-aged-care",
+    name: "Disability Aged Care",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
+    id: "allied-health",
+    slug: "allied-health",
+    name: "Allied Health",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
+    id: "community-nursing",
+    slug: "community-nursing",
+    name: "Community Nursing",
+    resourceType: "service",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -91,6 +161,96 @@ const serviceCases = [
 ] as const;
 
 const matchingCases = [
+  {
+    description: "general cost of living support",
+    needTags: [
+      "household-bills",
+      "food-relief",
+      "financial-hardship"
+    ],
+    expectedId: "cost-of-living"
+  },
+  {
+    description: "energy bill assistance",
+    needTags: [
+      "energy-bills",
+      "electricity-bill-support",
+      "energy-concession"
+    ],
+    expectedId: "energy-bill-concession"
+  },
+  {
+    description: "medical heating and cooling costs",
+    needTags: [
+      "medical-heating-cooling",
+      "temperature-sensitive-medical-condition",
+      "medical-certification"
+    ],
+    expectedId: "mhcc"
+  },
+  {
+    description: "electricity disconnection emergency",
+    needTags: [
+      "electricity-debt",
+      "electricity-disconnection",
+      "risk-of-disconnection"
+    ],
+    expectedId: "eeps"
+  },
+  {
+    description: "low-cost prescription glasses",
+    needTags: [
+      "low-cost-glasses",
+      "prescription-glasses",
+      "eye-care-costs"
+    ],
+    expectedId: "glassessa"
+  },
+  {
+    description: "free entry for a disability companion",
+    needTags: [
+      "free-companion-entry",
+      "significant-permanent-disability",
+      "lifelong-attendant-care"
+    ],
+    expectedId: "companion-card"
+  },
+  {
+    description: "supported independent living",
+    needTags: [
+      "supported-independent-living",
+      "daily-living-support",
+      "independent-living-skills"
+    ],
+    expectedId: "home-and-living"
+  },
+  {
+    description: "aged care for an older person with disability",
+    needTags: [
+      "disability-aged-care",
+      "older-person-with-disability",
+      "residential-aged-care"
+    ],
+    expectedId: "disability-aged-care"
+  },
+  {
+    description: "disability allied health support",
+    needTags: [
+      "allied-health",
+      "occupational-therapy",
+      "physiotherapy"
+    ],
+    expectedId: "allied-health"
+  },
+  {
+    description: "disability nursing care at home",
+    needTags: [
+      "community-nursing",
+      "nursing-at-home",
+      "wound-care"
+    ],
+    expectedId: "community-nursing"
+  },
   {
     description: "young carer support",
     needTags: [
@@ -245,7 +405,66 @@ describe("service dataset", () => {
       );
     }
   );
+  // Test Cost of Living service.
+  test("includes expected cost of living resources", () => {
+    const services = getServicesByCategory(
+      "cost-of-living-concessions"
+    );
 
+    const ids = services.map(
+      service => service.id
+    );
+
+    expect(ids).toEqual(
+      expect.arrayContaining([
+        "cost-of-living",
+        "energy-bill-concession",
+        "mhcc",
+        "eeps",
+        "glassessa",
+        "companion-card"
+      ])
+    );
+  });
+  // Test MHCC concession fee 
+  test("MHCC contains the verified 2026 amount", () => {
+    const service = getServiceById(
+      "mhcc"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.availabilityNote
+    ).toContain("$291.27");
+
+    expect(service?.lastVerified).toBe(
+      "2026-08-17"
+    );
+  });
+
+  // Test EEPS concession fee
+  test("EEPS contains emergency payment details", () => {
+    const service = getServiceById("eeps");
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.availabilityNote
+    ).toContain("$800");
+
+    expect(
+      service?.availabilityNote
+    ).toContain("two years");
+
+    expect(
+      service?.eligibilityNote
+    ).toContain("financial counsellor");
+
+    expect(service?.primaryAction.phone).toBe(
+      "1800 007 007"
+    );
+  });
   // Test "Youth" Related services.
   test("includes expected youth resources", () => {
     const services = getServicesByCategory(
@@ -274,6 +493,11 @@ describe("service dataset", () => {
 
     expect(ids).toEqual(
       expect.arrayContaining([
+        "cost-of-living",
+        "energy-bill-concession",
+        "mhcc",
+        "eeps",
+        "glassessa",
         "young-carer-support",
         "sa-youth-week",
         "mayfs",
@@ -283,7 +507,14 @@ describe("service dataset", () => {
         "community-connections-program",
         "ctsa",
         "community-centres",
-        "itc"
+        "itc",
+        "mhcc",
+        "glassessa",
+        "companion-card",
+        "home-and-living",
+        "disability-aged-care",
+        "allied-health",
+        "community-nursing"
       ])
     );
   });
@@ -334,10 +565,84 @@ describe("service dataset", () => {
     expect(ids).toEqual(
       expect.arrayContaining([
         "ctsa",
-        "itc"
+        "itc",
+        "glassessa",
+        "companion-card",
+        "home-and-living",
+        "disability-aged-care",
+        "allied-health",
+        "community-nursing"
       ])
     );
   });
+
+  // Test Disability main service - home and living
+  test("Home and Living contains service coverage details", () => {
+    const service = getServiceById(
+      "home-and-living"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(service?.regions).toEqual(
+      expect.arrayContaining([
+        "Metropolitan Adelaide",
+        "Kadina",
+        "Mount Gambier"
+      ])
+    );
+
+    expect(
+      service?.availabilityNote
+    ).toContain("24 hours");
+
+    expect(
+      service?.deliveryMethods
+    ).toContain("home-visit");
+  });
+  // Test Disability main service - Disability Aged Care
+  test("Disability Aged Care includes funding options", () => {
+    const service = getServiceById(
+      "disability-aged-care"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.availabilityNote
+    ).toContain("My Aged Care");
+
+    expect(
+      service?.availabilityNote
+    ).toContain(
+      "Disability Supports for Older Australians"
+    );
+
+    expect(service?.regions).toContain(
+      "Northgate"
+    );
+  });
+  // Allied Health service
+  test("Allied Health includes its three core services", () => {
+    const service = getServiceById(
+      "allied-health"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(service?.supportTypes).toEqual(
+      expect.arrayContaining([
+        "Occupational therapy",
+        "Physiotherapy",
+        "Dietetics"
+      ])
+    );
+
+    expect(
+      service?.availabilityNote
+    ).toContain("NDIS");
+  });
+
   test("all IDs are unique", () => {
     const ids = getAllServices().map(
       service => service.id
@@ -358,6 +663,31 @@ describe("service dataset", () => {
     );
   });
 
+  // Community Nursing
+  test("Community Nursing includes home-based care", () => {
+    const service = getServiceById(
+      "community-nursing"
+    );
+
+    expect(service).toBeDefined();
+
+    expect(
+      service?.deliveryMethods
+    ).toContain("home-visit");
+
+    expect(service?.supportTypes).toEqual(
+      expect.arrayContaining([
+        "Wound management",
+        "Diabetes management",
+        "Medication management"
+      ])
+    );
+
+    expect(
+      service?.availabilityNote
+    ).toContain("NDIS");
+  });
+
   test("all services have HTTPS source URLs", () => {
     for (const service of getAllServices()) {
       expect(service.sourceUrl).toMatch(
@@ -368,7 +698,7 @@ describe("service dataset", () => {
 
   test("returns no matches for unrelated tags", () => {
     const services = getServicesByNeedTags([
-      "energy-bills"
+      "pet-grooming"
     ]);
 
     expect(services).toHaveLength(0);
