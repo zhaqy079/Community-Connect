@@ -24,6 +24,13 @@ const serviceCases = [
     shortName: undefined
   },
   {
+    id: "energy-bill-concession",
+    slug: "energy-bill-concession",
+    name: "Energy Bill Concession",
+    resourceType: "concession",
+    shortName: undefined
+  },
+  {
     id: "young-carer-support",
     slug: "young-carer-support",
     name: "Young Carer Support Service",
@@ -106,6 +113,15 @@ const matchingCases = [
       "financial-hardship"
     ],
     expectedId: "cost-of-living"
+  },
+  {
+    description: "energy bill assistance",
+    needTags: [
+      "energy-bills",
+      "electricity-bill-support",
+      "energy-concession"
+    ],
+    expectedId: "energy-bill-concession"
   },
   {
     description: "young carer support",
@@ -271,8 +287,11 @@ describe("service dataset", () => {
       service => service.id
     );
 
-    expect(ids).toContain(
-      "cost-of-living"
+    expect(ids).toEqual(
+      expect.arrayContaining([
+        "cost-of-living",
+        "energy-bill-concession"
+      ])
     );
   });
 
@@ -304,6 +323,8 @@ describe("service dataset", () => {
 
     expect(ids).toEqual(
       expect.arrayContaining([
+        "cost-of-living",
+        "energy-bill-concession",
         "young-carer-support",
         "sa-youth-week",
         "mayfs",
@@ -398,7 +419,7 @@ describe("service dataset", () => {
 
   test("returns no matches for unrelated tags", () => {
     const services = getServicesByNeedTags([
-      "energy-bills"
+      "pet-grooming"
     ]);
 
     expect(services).toHaveLength(0);

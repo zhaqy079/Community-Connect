@@ -5,6 +5,9 @@ import type {
 import costOfLivingData from
   "../data/services/cost-of-living.json";
 
+import energyBillConcessionData from
+  "../data/services/energy-bill-concession.json";
+
 import youngCarerSupportData from
   "../data/services/young-carer-support.json";
 
@@ -38,6 +41,8 @@ import itcData from
 const costOfLiving =
   costOfLivingData as Service;
 
+const energyBillConcession =
+  energyBillConcessionData as Service;
 
 const youngCarerSupport =
   youngCarerSupportData as Service;
@@ -74,6 +79,7 @@ const itc = itcData as Service;
 
 export const services: Service[] = [
   costOfLiving,
+  energyBillConcession,
   youngCarerSupport,
   saYouthWeek,
   mayfs,
