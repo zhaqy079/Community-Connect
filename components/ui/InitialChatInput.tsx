@@ -46,7 +46,7 @@ export default function InitialChatInput() {
 
             <div className="pb-2">
                 <SupportSuggestions
-                    onSelect={(suggestion) => setMessage(suggestion.prompt)}
+                    onSelect={(category) => setMessage(category.defaultPrompt)}
                 />
             </div>
 

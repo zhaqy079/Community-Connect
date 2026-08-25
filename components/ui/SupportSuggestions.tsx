@@ -1,49 +1,11 @@
 "use client";
 
-type SupportSuggestion = {
-    id: string;
-    label: string;
-    prompt: string;
-};
+import { categories, type CategoryDefinition } from "@/src/data/categories";
 
 type SupportSuggestionsProps = {
-    onSelect?: (suggestion: SupportSuggestion) => void;
+    onSelect?: (category: CategoryDefinition) => void;
 };
 
-// TODO: Align with Elenor on service categories the app focuses on.
-// Should consolidate into a constant file for easier management and modification.
-const suggestions: SupportSuggestion[] = [
-    {
-        id: "housing",
-        label: "Housing & Homelessness",
-        prompt: "I need help with housing or homelessness.",
-    },
-    {
-        id: "cost-of-living",
-        label: "Cost of living",
-        prompt: "I need help with cost of living assistance.",
-    },
-    {
-        id: "youth-families-carers",
-        label: "Youth, families & carers",
-        prompt: "I need help with support for a young person, my family, or a carer.",
-    },
-    {
-        id: "aged-care",
-        label: "Aged care",
-        prompt: "I need help finding aged care services.",
-    },
-    {
-        id: "disability",
-        label: "Disability & accessibility",
-        prompt: "I need help finding disability or accessibility support.",
-    },
-    {
-        id: "community-support",
-        label: "Community support",
-        prompt: "I need help finding community support services.",
-    },
-];
 
 export default function SupportSuggestions({
     onSelect
@@ -55,11 +17,11 @@ export default function SupportSuggestions({
             </p>
 
             <div className="flex flex-wrap gap-2">
-                {suggestions.map((suggestion) => (
+                {categories.map((category) => (
                     <button
-                        key={suggestion.id}
+                        key={category.id}
                         type="button"
-                        onClick={() => onSelect?.(suggestion)}
+                        onClick={() => onSelect?.(category)}
                         className="cursor-pointer px-4 py-2
                         rounded-full border border-gray-300 bg-white
                         text-sm text-gray-700                       
@@ -70,7 +32,7 @@ export default function SupportSuggestions({
                         hover:text-[var(--cc-teal)]
                         "
                     >
-                        {suggestion.label}
+                        {category.label}
                     </button>
                 ))}
             </div>
