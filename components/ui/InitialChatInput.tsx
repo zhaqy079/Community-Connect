@@ -4,12 +4,14 @@ import { useRouter } from "next/navigation"
 
 import { useState } from "react";
 import SupportSuggestions from "./SupportSuggestions";
+import { type ServiceCategory } from "@/src/types/service";
 
 export default function InitialChatInput() {
 
     const router = useRouter();
 
     const [message, setMessage] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | null>(null);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -18,8 +20,12 @@ export default function InitialChatInput() {
 
         if (!trimmedMessage) return;
 
-        // TEMP Implementation
-        sessionStorage.setItem("initialChatMessage", trimmedMessage);
+        const initialChatData = {
+            message: trimmedMessage,
+            categoryId: selectedCategory,
+        }
+
+        sessionStorage.setItem("initialChatData", JSON.stringify(initialChatData));
 
         router.push(`/chat?message=${encodeURIComponent(trimmedMessage)}`);
     };
@@ -46,7 +52,11 @@ export default function InitialChatInput() {
 
             <div className="pb-2">
                 <SupportSuggestions
-                    onSelect={(category) => setMessage(category.defaultPrompt)}
+                    onSelect={(category) => {
+                        setMessage(category.defaultPrompt);
+                        setSelectedCategory(category.id);
+                    }
+                    }
                 />
             </div>
 

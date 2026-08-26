@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import UserInput from "@/components/ui/UserInput";
 
+import { type ServiceCategory } from "@/src/types/service";
+import { getServicesByCategory } from "@/src/lib/services";
+
+type InitialChatData = {
+    message: string;
+    categoryId: ServiceCategory | null;
+};
+
 type Message = {
     id: number;
     role: "user" | "assistant";
@@ -15,24 +23,33 @@ export default function ChatPage() {
     const [messages, setMessages] = useState<Message[]>([]);
 
     useEffect(() => {
-        const initialMessage = sessionStorage.getItem("initialChatMessage");
+        const storedData = sessionStorage.getItem("initialChatData");
 
-        if (!initialMessage) return;
+        if (!storedData) return;
+
+        const initialChatData: InitialChatData = JSON.parse(storedData);
+
+        const mathcedServices = initialChatData.categoryId
+            ? getServicesByCategory(initialChatData.categoryId) : [];
+
+        console.log(mathcedServices);
 
         setMessages([
             {
                 id: 1,
                 role: "user",
-                content: initialMessage,
+                content: initialChatData.message,
             },
             {
                 id: 2,
                 role: "assistant",
-                content: "Thanks for sharing that. I can help you find support services that may be relevant to your situation.",
+                content: mathcedServices.length > 0
+                    ? `Thanks for sharing that! I have found ${mathcedServices.length} services in this support area.`
+                    : "Thanks for sharing that. Tell me a little more about the support you need",
             }
         ])
 
-        sessionStorage.removeItem("initialChatMessage")
+        sessionStorage.removeItem("initialChatData")
     }, []);
 
 
