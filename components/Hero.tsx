@@ -1,5 +1,5 @@
 import Logo from "./ui/Logo"
-import InitialChatInput from "./ui/InitialChatInput"
+import InitialChatInput from "./ui/chat/InitialChatInput"
 
 export default function Hero() {
 

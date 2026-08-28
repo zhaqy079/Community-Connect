@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 
 import { useState } from "react";
-import SupportSuggestions from "./SupportSuggestions";
+import SupportSuggestions from "../SupportSuggestions";
 import { type ServiceCategory } from "@/src/types/service";
 
 export default function InitialChatInput() {
