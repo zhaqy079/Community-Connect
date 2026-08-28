@@ -78,12 +78,57 @@ export default function ChatInput() {
                     </span>
                 )}
             </div>
+            {/* Disclaimer Area */}
             <div className="pb-2">
                 <p className="mt-3 text-xs text-gray-600">
                     Please don't include sensitive personal
                     information. Eligibility must be confirmed with
                     the relevant service provider.
                 </p>
+            </div>
+            <div className="pb-2">
+                <details
+                    className="mt-3 rounded-xl
+                    border border-orange-200
+                    bg-[var(--cc-yellow)]
+                    text-[var(--cc-warning-text)]
+                    px-4 py-2.5
+                 "
+                >
+                    <summary
+                        className="cursor-pointer
+                        rounded-md text-sm
+                        focus-visible:outline
+                        focus-visible:outline-2
+                        focus-visible:outline-[var(--cc-orange)]
+                        focus-visible:outline-offset-2
+                      "
+                    >
+                        Need urgent help?
+                        <span className="ml-1 font-normal">
+                            Call 000 if someone is in immediate danger.
+                        </span>
+                    </summary>
+
+                    <div className="mt-3 border-[var(--cc-warning-border)] pt-3">
+                        <p className="text-sm leading-6 ">
+                            Community Connect is not an emergency
+                            service.
+                        </p>
+
+                        <a
+                            href="tel:000"
+                            className="
+                             mt-2 inline-flex rounded-lg
+                            bg-red-700 px-4 py-2
+                            font-semibold !text-white
+                            hover:bg-red-800 hover:!text-white
+                            "
+                        >
+                            Call 000
+                        </a>
+                    </div>
+                </details>
             </div>
             <div className="pb-2">
                 <SupportSuggestions
