@@ -1,25 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import UserInput from "@/components/ui/UserInput";
+import UserInput from "@/components/ui/chat/UserInput";
 
 import { type ServiceCategory, Service } from "@/src/types/service";
 import { getServicesByCategory } from "@/src/lib/services";
 
-// UI Component imports
-import ServiceCard from "@/components/ui/ServiceCard";
+import { type Message } from "@/src/types/chat";
+import ChatMessage from "@/components/ui/chat/ChatMessage";
 
 type InitialChatData = {
     message: string;
     categoryId: ServiceCategory | null;
-};
-
-type Message = {
-    id: number;
-    role: "user" | "assistant";
-    content: string;
-    services?: Service[];
 };
 
 export default function ChatPage() {
@@ -66,33 +58,8 @@ export default function ChatPage() {
 
             {/* TODO: Add timestamp -> -- hh:mm dd/mm/yyyy -- */}
             <section className="flex-1 min-h-0 overflow-y-auto">
-                {/* TODO: Separate into two UI components later: 1. UserPromtBubble and 2. AssistantResponseBubble */}
                 {messages.map((message) => (
-                    <div
-                        key={message.id}
-                        className={`relative break-words rounded-2xl mb-3 max-w-[95%] sm:max-w-[90%] lg:max-w-[80%]
-                        ${message.role === "user"
-                                ? "ml-auto bg-[var(--cc-teal)] p-4 text-white"
-                                : "mr-auto bg-gray-200 p-4"}
-                    `}
-                    >
-                        {message.content}
-
-                        {message.services && message.services.length > 0 && (
-                            <div className="mt-3 mr-auto w-full max-w-2xl space-y-3 mb-8">
-                                {/* TODO: Design a reusable expandable UI card component to display Service details */}
-                                {message.services.map((service) => (
-                                    <ServiceCard key={service.id} service={service} />
-                                ))}
-                            </div>
-                        )}
-
-                        {/* Icon to indicate response from Assistant */}
-                        {message.role === "assistant" && (
-                            <Image src="/logo.svg" alt="" width={30} height={30}
-                                className="absolute bottom-2 right-2" />
-                        )}
-                    </div>
+                    <ChatMessage key={message.id} message={message} />
                 ))}
             </section>
 
