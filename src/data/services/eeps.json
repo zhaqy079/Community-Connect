@@ -1,0 +1,59 @@
+{
+  "id": "eeps",
+  "slug": "emergency-electricity-payment-scheme",
+  "name": "Emergency Electricity Payment Scheme",
+  "shortName": "EEPS",
+  "provider": "Department of Human Services",
+  "resourceType": "program",
+  "categories": [
+    "cost-of-living-concessions"
+  ],
+  "needTags": [
+    "emergency-electricity-payment",
+    "electricity-debt",
+    "electricity-disconnection",
+    "risk-of-disconnection",
+    "financial-crisis",
+    "energy-bill-arrears",
+    "urgent-energy-support",
+    "financial-counselling",
+    "utility-hardship"
+  ],
+  "shortDescription": "Emergency assistance of up to $800 for eligible households with electricity debt who have been disconnected or are at risk of disconnection.",
+  "plainEnglishSummary": "If you cannot pay your electricity debt and your power has been disconnected or may soon be disconnected, a financial counsellor may be able to assess your situation and apply for an emergency payment on your behalf.",
+  "audience": [
+    "South Australian households experiencing serious financial hardship",
+    "Electricity customers with unpaid electricity debt",
+    "Households whose electricity has been disconnected",
+    "Households at risk of electricity disconnection"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Emergency electricity payment",
+    "Electricity debt assistance",
+    "Support for households at risk of disconnection",
+    "Support following electricity disconnection",
+    "Financial counselling assessment",
+    "Electricity account credit"
+  ],
+  "deliveryMethods": [
+    "phone",
+    "in-person"
+  ],
+  "cost": "not-applicable",
+  "availabilityStatus": "active",
+  "availabilityNote": "At the last verification date of 17 August 2026, an eligible household could receive up to $800, not exceeding the value of its eligible electricity debt. The payment is credited directly to the electricity account and is generally available no earlier than two years after the household's previous EEPS payment.",
+  "contact": {
+    "website": "https://www.sa.gov.au/topics/care-and-support/concessions/financial-aid/emergency-financial-aid",
+    "phone": "1800 007 007"
+  },
+  "primaryAction": {
+    "label": "Call the National Debt Helpline",
+    "phone": "1800 007 007"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. EEPS is intended for households in financial crisis with electricity debt that have been disconnected or are at risk of disconnection. Individuals cannot lodge an application directly; an accredited financial counsellor must assess the household's circumstances and submit the application.",
+  "sourceUrl": "https://www.sa.gov.au/topics/care-and-support/concessions/financial-aid/emergency-financial-aid",
+  "lastVerified": "2026-08-17"
+}

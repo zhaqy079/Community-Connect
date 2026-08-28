@@ -1,0 +1,60 @@
+{
+  "id": "energy-bill-concession",
+  "slug": "energy-bill-concession",
+  "name": "Energy Bill Concession",
+  "provider": "Department of Human Services",
+  "resourceType": "concession",
+  "categories": [
+    "cost-of-living-concessions"
+  ],
+  "needTags": [
+    "energy-bills",
+    "electricity-bill-support",
+    "energy-concession",
+    "household-bills",
+    "cost-of-living-support",
+    "low-income",
+    "fixed-income",
+    "eligible-concession-card",
+    "centrelink-payment",
+    "residential-energy-costs"
+  ],
+  "shortDescription": "Financial assistance of up to $291.27 per year to help eligible South Australians with energy costs at their main residence.",
+  "plainEnglishSummary": "If you are on a low or fixed income and need help with energy costs at your main home, you may be able to receive up to $291.27 per year through the Energy Bill Concession.",
+  "audience": [
+    "South Australians on a low or fixed income",
+    "People holding an eligible concession card",
+    "People receiving an eligible Centrelink payment",
+    "Eligible asylum seekers",
+    "Residential park residents seeking household concessions"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Energy bill concession",
+    "Electricity bill credit",
+    "Household energy cost assistance",
+    "Concession payments for eligible living arrangements",
+    "Household concession application support"
+  ],
+  "deliveryMethods": [
+    "online",
+    "phone"
+  ],
+  "cost": "not-applicable",
+  "availabilityStatus": "active",
+  "availabilityNote": "At the last verification date of 17 August 2026, eligible applicants could receive up to $291.27 per year. The amount is indexed and may change each financial year. How the concession is paid depends on the applicant's living arrangements and energy billing method.",
+  "contact": {
+    "website": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/energy-bill-concessions",
+    "phone": "1800 307 758",
+    "email": "concessions@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Check eligibility and apply",
+    "url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/energy-bill-concessions"
+  },
+  "eligibilityNote": "Community Connect cannot confirm eligibility. Applicants generally need to live at the property, have an energy account in their name and be listed first on the energy bill. They must also hold an eligible concession card or receive an eligible payment. Check the official requirements or contact ConcessionsSA before applying.",
+  "sourceUrl": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/energy-bill-concessions",
+  "lastVerified": "2026-08-17"
+}

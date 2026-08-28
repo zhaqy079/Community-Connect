@@ -1,0 +1,63 @@
+{
+  "id": "community-nursing",
+  "slug": "community-nursing",
+  "name": "Community Nursing",
+  "provider": "DHS Disability Services",
+  "resourceType": "service",
+  "categories": [
+    "disability-accessibility"
+  ],
+  "needTags": [
+    "community-nursing",
+    "nursing-at-home",
+    "disability-health-support",
+    "health-assessment",
+    "continence-care",
+    "catheter-care",
+    "wound-care",
+    "diabetes-management",
+    "insulin-administration",
+    "medication-management"
+  ],
+  "shortDescription": "Professional community nursing care delivered at home for people who need disability-related health support.",
+  "plainEnglishSummary": "If your disability means you need nursing care at home, the Community Nursing team may help with health assessments, wound care, continence support, diabetes management, medication and other health needs.",
+  "audience": [
+    "People with disability who need nursing care at home",
+    "People requiring disability-related health support",
+    "NDIS participants with relevant Core Supports funding",
+    "People needing help managing an ongoing health care plan"
+  ],
+  "regions": [
+    "South Australia"
+  ],
+  "supportTypes": [
+    "Health assessment",
+    "Individual nursing care plan",
+    "Continence assessment and management",
+    "Catheter care",
+    "Wound management",
+    "Diabetes management",
+    "Insulin administration",
+    "Medication management",
+    "Disability-related nursing support"
+  ],
+  "deliveryMethods": [
+    "in-person",
+    "home-visit"
+  ],
+  "cost": "varies",
+  "availabilityStatus": "active",
+  "availabilityNote": "Service availability, visit times, costs and service areas depend on the person's assessed nursing needs, clinician availability and funding arrangements. Disability-related nursing may be funded through the Disability Related Health Supports category of an eligible NDIS Core Supports budget.",
+  "contact": {
+    "website": "https://dhsdisabilityservices.sa.gov.au/our-services/nursing-team",
+    "phone": "1800 952 962",
+    "email": "DHSDisabilityServices@sa.gov.au"
+  },
+  "primaryAction": {
+    "label": "Enquire about Community Nursing",
+    "url": "https://dhsdisabilityservices.sa.gov.au/our-services/nursing-team"
+  },
+  "eligibilityNote": "Community Connect cannot confirm clinical suitability, NDIS funding or service availability. Contact DHS Disability Services to discuss nursing needs, location, funding and whether Community Nursing is appropriate. Seek urgent medical assistance through the appropriate emergency service when immediate care is required.",
+  "sourceUrl": "https://dhsdisabilityservices.sa.gov.au/our-services/nursing-team",
+  "lastVerified": "2026-08-17"
+}
