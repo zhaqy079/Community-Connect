@@ -82,15 +82,14 @@ export default function ChatInput() {
             <div className="pb-2">
                 <p className="mt-3 text-xs text-gray-600">
                     Please don't include sensitive personal
-                    information. Eligibility must be confirmed with
-                    the relevant service provider.
+                    information.
                 </p>
             </div>
             <div className="pb-2">
                 <details
                     className="mt-3 rounded-xl
                     border border-orange-200
-                    bg-[var(--cc-yellow)]
+                    bg-[var(--cc-warning)]
                     text-[var(--cc-warning-text)]
                     px-4 py-2.5
                  "

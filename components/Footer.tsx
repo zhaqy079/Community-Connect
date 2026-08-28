@@ -6,6 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-500">
         <p>© 2026 Community Connect. All rights reserved.</p>
 
+
         <nav className="flex gap-6">
           <Link
             href="/about"

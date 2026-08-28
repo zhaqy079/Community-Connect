@@ -13,12 +13,14 @@ export default function Hero() {
       <Logo />
 
       <p className="max-w-2xl text-lg pt-6 text-[var(--cc-text-light)]">
-        Helping people discover local services, support, and community
-        resources in one accessible place.
+        {/* Helping people discover local services, support, and community
+        resources in one accessible place. */}
+        Find South Australian support in one accessible place.
       </p>
 
       <p className="pt-6 text-center font-bold max-w-2xl text-lg text-[var(--cc-text-light)]">
-        Describe what you're looking for and we'll help you find the right support.
+        {/* Describe what you're looking for and we'll help you find the right support. */}
+        What support are you looking for?
       </p>
 
       <ChatInput />
