@@ -7,6 +7,9 @@ import UserInput from "@/components/ui/UserInput";
 import { type ServiceCategory, Service } from "@/src/types/service";
 import { getServicesByCategory } from "@/src/lib/services";
 
+// UI Component imports
+import ServiceCard from "@/components/ui/ServiceCard";
+
 type InitialChatData = {
     message: string;
     categoryId: ServiceCategory | null;
@@ -67,7 +70,7 @@ export default function ChatPage() {
                 {messages.map((message) => (
                     <div
                         key={message.id}
-                        className={`relative break-words rounded-2xl mb-3 max-w-[85%]
+                        className={`relative break-words rounded-2xl mb-3 max-w-[95%] sm:max-w-[90%] lg:max-w-[80%]
                         ${message.role === "user"
                                 ? "ml-auto bg-[var(--cc-teal)] p-4 text-white"
                                 : "mr-auto bg-gray-200 p-4"}
@@ -79,18 +82,7 @@ export default function ChatPage() {
                             <div className="mt-3 mr-auto w-full max-w-2xl space-y-3 mb-8">
                                 {/* TODO: Design a reusable expandable UI card component to display Service details */}
                                 {message.services.map((service) => (
-                                    <div
-                                        key={service.id}
-                                        className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
-                                    >
-                                        <h2 className="font-semibold text-gray-900">
-                                            {service.name}
-                                        </h2>
-
-                                        <p className="mt-2 text-sm text-gray-600">
-                                            {service.shortDescription}
-                                        </p>
-                                    </div>
+                                    <ServiceCard key={service.id} service={service} />
                                 ))}
                             </div>
                         )}
