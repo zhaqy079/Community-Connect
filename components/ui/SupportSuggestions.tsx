@@ -51,7 +51,7 @@ export default function SupportSuggestions({
     return (
         <div className="pt-2 w-full max-w-2xl">
             <p className="mb-3 text-sm font-medium text-gray-600">
-                or choose a support area:
+                Or browse by topic
             </p>
 
             <div className="flex flex-wrap gap-2">
