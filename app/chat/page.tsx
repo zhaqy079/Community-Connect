@@ -14,23 +14,34 @@ type InitialChatData = {
     categoryId: ServiceCategory | null;
 };
 
+const CHAT_MESSAGES_KEY = "chatMessages";
+const INITIAL_CHAT_DATA_KEY = "initialChatData";
+
 export default function ChatPage() {
 
     const [messages, setMessages] = useState<Message[]>([]);
 
     useEffect(() => {
-        const storedData = sessionStorage.getItem("initialChatData");
+        // First, check whether an existing conversation has been saved.
+        const storedMessages = sessionStorage.getItem(CHAT_MESSAGES_KEY);
 
-        if (!storedData) return;
+        if (storedMessages) {
+            const parsedMessages: Message[] = JSON.parse(storedMessages);
+            setMessages(parsedMessages);
+            return;
+        }
 
-        const initialChatData: InitialChatData = JSON.parse(storedData);
+        // If there is no existing conversation then create it from the landing page (initial chat input) data.
+        const storedInitialData = sessionStorage.getItem(INITIAL_CHAT_DATA_KEY);
+
+        if (!storedInitialData) return;
+
+        const initialChatData: InitialChatData = JSON.parse(storedInitialData);
 
         const matchedServices = initialChatData.categoryId
-            ? getServicesByCategory(initialChatData.categoryId) : [];
+            ? getServicesByCategory(initialChatData.categoryId)
+            : [];
 
-        console.log(matchedServices);
-
-        // Set initial meesages and corresponding responses.
         const initialMessages: Message[] = [
             {
                 id: 1,
@@ -40,18 +51,24 @@ export default function ChatPage() {
             {
                 id: 2,
                 role: "assistant",
-                content: matchedServices.length > 0
-                    ? `Thank you for sharing the information. I found ${matchedServices.length} services that may be of help.`
-                    : "Thanks for sharing that. Can you please tell me a little bit more about the support you need?",
-                services: matchedServices.length > 0 ? matchedServices : undefined,
-            }
+                content:
+                    matchedServices.length > 0
+                        ? `Thank you for sharing the information. I found ${matchedServices.length} services that may be of help.`
+                        : "Thanks for sharing that. Can you please tell me a little bit more about the support you need?",
+                services:
+                    matchedServices.length > 0
+                        ? matchedServices
+                        : undefined,
+            },
         ];
 
         setMessages(initialMessages);
 
-        sessionStorage.removeItem("initialChatData")
-    }, []);
+        // Save the newly created conversation.
+        sessionStorage.setItem(CHAT_MESSAGES_KEY, JSON.stringify(initialMessages));
 
+        sessionStorage.removeItem(INITIAL_CHAT_DATA_KEY);
+    }, []);
 
     return (
         <main className="flex h-[calc(100dvh-90px)] min-h-0 flex-col px-10 pt-6">
@@ -64,6 +81,8 @@ export default function ChatPage() {
             </section>
 
             {/* User prompt/input section */}
+            {/* TODO: in new branch add function for user to send additional prompt 
+                & add message to history with assistant's follow up response */}
             <UserInput />
 
 
