@@ -92,7 +92,7 @@ export default function InitialChatInput() {
             {/* Disclaimer Area */}
             <div className="pb-2">
                 <p className="mt-3 text-xs text-gray-600">
-                    Please don't include sensitive personal
+                    Please don&apos;t include sensitive personal
                     information.
                 </p>
             </div>
