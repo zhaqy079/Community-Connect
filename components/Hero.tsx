@@ -1,5 +1,5 @@
 import Logo from "./ui/Logo"
-import ChatInput from "./ui/ChatInput"
+import InitialChatInput from "./ui/chat/InitialChatInput"
 
 export default function Hero() {
 
@@ -23,7 +23,7 @@ export default function Hero() {
         What support are you looking for?
       </p>
 
-      <ChatInput />
+      <InitialChatInput />
 
     </section>
   )

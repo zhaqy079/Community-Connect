@@ -3,22 +3,33 @@
 import { useRouter } from "next/navigation"
 
 import { useState } from "react";
-import SupportSuggestions from "./SupportSuggestions";
-const MAX_MESSAGE_LENGTH = 300; // Limit 1-3 sentences, no more :( 
+import SupportSuggestions from "../SupportSuggestions";
+import { type ServiceCategory } from "@/src/types/service";
+const MAX_MESSAGE_LENGTH = 300;
 
-export default function ChatInput() {
+export default function InitialChatInput() {
 
     const router = useRouter();
 
     const [message, setMessage] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | null>(null);
     const trimmedMessage = message.trim();
     const isEmpty = trimmedMessage.length === 0;
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        const trimmedMessage = message.trim();
+
         if (!trimmedMessage) return;
         if (isEmpty) return;
+
+        const initialChatData = {
+            message: trimmedMessage,
+            categoryId: selectedCategory,
+        }
+
+        sessionStorage.setItem("initialChatData", JSON.stringify(initialChatData));
 
         router.push(`/chat?message=${encodeURIComponent(trimmedMessage)}`);
     };
@@ -81,7 +92,7 @@ export default function ChatInput() {
             {/* Disclaimer Area */}
             <div className="pb-2">
                 <p className="mt-3 text-xs text-gray-600">
-                    Please don't include sensitive personal
+                    Please don&apos;t include sensitive personal
                     information.
                 </p>
             </div>
@@ -129,9 +140,14 @@ export default function ChatInput() {
                     </div>
                 </details>
             </div>
+
             <div className="pb-2">
                 <SupportSuggestions
-                    onSelect={(suggestion) => setMessage(suggestion.prompt)}
+                    onSelect={(category) => {
+                        setMessage(category.defaultPrompt);
+                        setSelectedCategory(category.id);
+                    }
+                    }
                 />
             </div>
 
