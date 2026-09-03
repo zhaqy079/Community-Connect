@@ -29,6 +29,9 @@ export default function InitialChatInput() {
             categoryId: selectedCategory,
         }
 
+        // Clear previously saved chat messages to allow the new prompt to start a new conversation.
+        sessionStorage.removeItem("chatMessages");
+
         sessionStorage.setItem("initialChatData", JSON.stringify(initialChatData));
 
         router.push(`/chat?message=${encodeURIComponent(trimmedMessage)}`);
