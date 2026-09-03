@@ -1,4 +1,4 @@
-const needTagKeywords: Record<string, string[]> = {
+export const needTagKeywords: Record<string, string[]> = {
     // 
     // Youth, Families & Carers
     // 
