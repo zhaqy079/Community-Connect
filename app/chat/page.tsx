@@ -5,6 +5,7 @@ import UserInput from "@/components/ui/chat/UserInput";
 
 import { type ServiceCategory, Service } from "@/src/types/service";
 import { getServicesByCategory } from "@/src/lib/services";
+import { matchServices } from "@/src/lib/matching/matchServices";
 
 import { type Message } from "@/src/types/chat";
 import ChatMessage from "@/components/ui/chat/ChatMessage";
@@ -40,7 +41,7 @@ export default function ChatPage() {
 
         const matchedServices = initialChatData.categoryId
             ? getServicesByCategory(initialChatData.categoryId)
-            : [];
+            : matchServices(initialChatData.message);
 
         const initialMessages: Message[] = [
             {
